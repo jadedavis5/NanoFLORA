@@ -4,7 +4,7 @@ nextflow.enable.dsl=2
 
 //Input parameters list
 params.help = null
-params.tool = null
+params.tool = null  //This can be exploratory (StringTie2) or strict (IsoQuant)- at the moment only exploratory is used
 
 params.projectDir = '.' //Project directory is by deafult where the script is being run
 params.outputdir = '$params.projectDir/output' //Output directory by deafult is at the project directory
@@ -25,57 +25,30 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 ----------------------------------------------------------------------------------------
 */
 
-/*
-========================================================================================
-    Include Modules
-========================================================================================
-*/
+// Call specific workflow 
 
-include { BWA_INDEX  }                                from "./modules/bwa_index" addParams(OUTPUT: "${params.outdir}/bwa_index")
-include { BWA_ALIGN  }                                from "./modules/bwa_align" addParams(OUTPUT: "${params.outdir}/bwa_align")
-include { SAMTOOLS_SORT; SAMTOOLS_INDEX }             from "./modules/samtools"  addParams(OUTPUT: "${params.outdir}/sorted_bam")
-include { BCFTOOLS_MPILEUP; BCFTOOLS_CALL; VCFUTILS } from "./modules/bcftools"  addParams(OUTPUT: "${params.outdir}/vcf")
-
-/*
-========================================================================================
-    Include Sub-Workflows
-========================================================================================
-*/
-
-include { READ_QC } from "./subworkflows/fastmultiqc" addParams(OUTPUT: "${params.outdir}/read_qc")
-
-/*
-========================================================================================
-    Create Channels
-========================================================================================
-*/
-
-ref_ch = Channel.fromPath( params.genome, checkIfExists: true  )
-reads_ch = Channel.fromFilePairs( params.reads, checkIfExists: true )
-
-/*
-========================================================================================
-    WORKFLOW - Variant Calling
-========================================================================================
-*/
-
-workflow QC {
-
-    READ_QC( reads_ch )
-
+workflow_input = params.tool
+switch (workflow_input) {
+    case ["exploratory"]:
+        include { StringTie2_WORKFLOW } from './workflows/stringtie2_workflow.nf'
+	break;
 }
 
+
+// Main workflow used to select from themes and tools
 workflow {
 
-    READ_QC( reads_ch )
-    BWA_INDEX( ref_ch )
-    BWA_ALIGN( BWA_INDEX.out.bwa_index.combine(reads_ch) )
-    SAMTOOLS_SORT( BWA_ALIGN.out.aligned_bam )
-    SAMTOOLS_INDEX( SAMTOOLS_SORT.out.sorted_bam )
-    BCFTOOLS_MPILEUP( BWA_INDEX.out.bwa_index.combine(SAMTOOLS_INDEX.out.aligned_sorted_bam) )
-    BCFTOOLS_CALL( BCFTOOLS_MPILEUP.out.raw_bcf )
-    VCFUTILS( BCFTOOLS_CALL.out.variants_vcf )
+	/*
+	* WORKFLOW call here 
+	*/
+	if (params.tool == "exploratory") {
+		StringTie2_WORKFLOW()
 
+	} else {
+	
+		println("Please provide the correct input options")
+
+	}		 
 }
 
 workflow.onComplete {
