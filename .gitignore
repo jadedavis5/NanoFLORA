@@ -1,2 +1,3 @@
 run-pipeline*
 .nextflow*
+work/*

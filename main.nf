@@ -4,7 +4,7 @@ nextflow.enable.dsl=2
 
 //Input parameters list
 params.help = null
-params.tool = null  //This can be exploratory (StringTie2) or strict (IsoQuant)- at the moment only exploratory is used
+params.tool = null  //This can be loose (StringTie2) or strict (IsoQuant)- at the moment only ST being made
 
 params.projectDir = '.' //Project directory is by deafult where the script is being run
 params.outputdir = '$params.projectDir/output' //Output directory by deafult is at the project directory
@@ -27,14 +27,15 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 
 workflow_input = params.tool
 switch (workflow_input) {
-    case ["exploratory"]:
-        include { StringTie2_WORKFLOW } from './workflows/stringtie2_workflow.nf'
+    case ["loose"]:
+        include { StringTie2WF } from './workflows'
 	break;
 }
 
 workflow {
-	if (params.tool == "exploratory") {
-		StringTie2_WORKFLOW()
+	if (params.tool == "loose") {
+		println("StringTie2 workflow being used")
+		StringTie2WF()
 
 	} else {
 	
