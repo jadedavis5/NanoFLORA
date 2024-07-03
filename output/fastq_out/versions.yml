@@ -1,4 +1,0 @@
-"FASTQ_TEST_WORKFLOW:FASTQ_TEST:FASTQC":
-    fastqc: 0.12.1
-    identifiers: 'https://www.bioinformatics.babraham.ac.uk/projects/fastqc/'
-    authors: 'Andrews S.'
