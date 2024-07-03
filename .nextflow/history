@@ -1,0 +1,6 @@
+2024-07-03 12:50:32	-	naughty_monod	-	88509f78fa9ed65f15f7e4ea26149f97	d8c2bb85-6bcb-4eb2-a90d-149337a59632	nextflow run main.nf -profile singularity
+2024-07-03 12:57:26	-	happy_waddington	-	88509f78fa9ed65f15f7e4ea26149f97	d61f6e05-5886-45a9-96a3-1cbf6159bfb1	nextflow run main.nf -profile singularity
+2024-07-03 13:01:53	-	elegant_agnesi	-	88509f78fa9ed65f15f7e4ea26149f97	dcb4fc6b-68b9-4c4b-8f9a-e0167bc85c05	nextflow run main.nf -profile singularity --nanopore-reads ../transcriptomes/control-dRNA-Nanopore_mapping/filtered_Maximus5_sup_all.fastq.gz
+2024-07-03 13:06:39	-	hungry_hugle	-	6db0161c706e76cd79fd912c3b20eeec	682e4ea8-0f6d-4095-af05-9a48581aca79	nextflow run main.nf -profile singularity --nanopore-reads ../transcriptomes/control-dRNA-Nanopore_mapping/filtered_Maximus5_sup_all.fastq.gz
+2024-07-03 13:08:44	1.8s	sad_mcclintock	OK	c5bb287608810872e51928dba20a2dde	b596ae98-e8b2-4c91-8831-9ed84a22e07f	nextflow run main.nf -profile singularity --nanopore-reads ../transcriptomes/control-dRNA-Nanopore_mapping/filtered_Maximus5_sup_all.fastq.gz
+2024-07-03 13:11:10	1.5s	gloomy_elion	OK	c5bb287608810872e51928dba20a2dde	3355c44e-79ad-4374-aa4c-f0dbbb3bd4ed	nextflow run main.nf -profile singularity --nanopore-reads ../transcriptomes/control-dRNA-Nanopore_mapping/filtered_Maximus5_sup_all.fastq.gz

@@ -10,8 +10,8 @@ params.projectDir = '.' //Project directory is by deafult where the script is be
 params.outputdir = '$params.projectDir/output' //Output directory by deafult is at the project directory
 
 params.genome = '' //User input genome fasta
-params.nanopore-reads = '' //User input nanopore read fastqc files
-params.nanopore-type = '' //User input dRNA or cDNA based on nanopore sequencing 
+params.nanopore_reads = 'read.fq' //User input nanopore read fastqc files
+params.nanopore_type = '' //User input dRNA or cDNA based on nanopore sequencing 
 params.contamination = '' // (OPTIONAL) User input contaminat files e.g. RCS  
 params.chloroplast_genome = '' // (OPTIONAL) User input chloroplast genome if they want chloroplast % checked
 params.ref_annotation = '' // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
@@ -25,8 +25,6 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 ----------------------------------------------------------------------------------------
 */
 
-// Call specific workflow 
-
 workflow_input = params.tool
 switch (workflow_input) {
     case ["exploratory"]:
@@ -34,13 +32,7 @@ switch (workflow_input) {
 	break;
 }
 
-
-// Main workflow used to select from themes and tools
 workflow {
-
-	/*
-	* WORKFLOW call here 
-	*/
 	if (params.tool == "exploratory") {
 		StringTie2_WORKFLOW()
 
@@ -51,19 +43,3 @@ workflow {
 	}		 
 }
 
-workflow.onComplete {
-
-    println ( workflow.success ? """
-        Pipeline execution summary
-        ---------------------------
-        Completed at: ${workflow.complete}
-        Duration    : ${workflow.duration}
-        Success     : ${workflow.success}
-        workDir     : ${workflow.workDir}
-        exit status : ${workflow.exitStatus}
-        """ : """
-        Failed: ${workflow.errorReport}
-        exit status : ${workflow.exitStatus}
-        """
-    )
-}

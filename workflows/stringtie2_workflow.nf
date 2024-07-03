@@ -1,9 +1,9 @@
-params.genome = '' //User input genome fasta
-params.nanopore-reads = '' //User input nanopore read fastqc files
-params.nanopore-type = '' //User input dRNA or cDNA based on nanopore sequencing
-params.contamination = '' // (OPTIONAL) User input contaminat files e.g. RCS
-params.chloroplast_genome = '' // (OPTIONAL) User input chloroplast genome if they want chloroplast % checked
-params.ref_annotation = '' // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
+genome = params.genome
+nanopore-reads = params.nanopore-reads
+nanopore-type = params.nanopore-type
+contamination = params.contamination
+chloroplast_genome = params.chloroplast_genome
+ref_annotation = params.ref_annotation
 
 // Include subworkflows
 include { QC } from '../subworkflows/QC'
@@ -14,7 +14,7 @@ include { QC } from '../subworkflows/QC'
 workflow StringTie2_WORKFLOW {
 	// Set reads and quality check	
 
-	nanopore-reads = channel.fromPath(params.nanopore-reads, checkIfExists: true)
+	nanopore-reads = channel.fromPath(${nanopore-reads}, checkIfExists: true)
 	QC(nanopore-reads)
 	
 	// Perform chloroplast contamination check if genome given
