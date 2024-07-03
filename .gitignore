@@ -1,3 +1,11 @@
 run-pipeline*
 .nextflow*
 work/*
+.nextflow
+.idea/**
+.gradle
+.*.log*
+.cache/*
+.vagrant/*
+test-data
+output

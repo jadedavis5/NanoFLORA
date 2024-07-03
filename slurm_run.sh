@@ -13,4 +13,6 @@
 
 module load nextflow/23.10.0
 
-nextflow run main.nf -profile singularity --nanopore-reads ../transcriptomes/control-dRNA-Nanopore_mapping/filtered_Maximus5_sup_all.fastq.gz --tool loose
+module load singularity/4.1.0-nompi
+
+nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads test-data/small-data.fastq --tool loose

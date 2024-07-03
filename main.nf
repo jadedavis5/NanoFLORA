@@ -7,7 +7,7 @@ params.help = null
 params.tool = null  //This can be loose (StringTie2) or strict (IsoQuant)- at the moment only ST being made
 
 params.projectDir = '.' //Project directory is by deafult where the script is being run
-params.outputdir = '$params.projectDir/output' //Output directory by deafult is at the project directory
+params.outputdir = './output' //Output directory by deafult is at the project directory
 
 params.genome = '' //User input genome fasta
 params.nanopore_reads = 'read.fq' //User input nanopore read fastqc files
@@ -28,7 +28,7 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 workflow_input = params.tool
 switch (workflow_input) {
     case ["loose"]:
-        include { StringTie2WF } from './workflows'
+        include { StringTie2WF } from './workflows/'
 	break;
 }
 

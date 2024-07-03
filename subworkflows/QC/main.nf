@@ -1,7 +1,7 @@
 
 // QC subworkflow 
 
-include { FASTQC; MULTIQC  } from '../../modules/QC'
+include { FASTQC; MULTIQC  } from '../../modules/QC/'
 
 workflow QC {
 
