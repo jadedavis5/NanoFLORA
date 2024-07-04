@@ -1,0 +1,13 @@
+process COMBINE_FILES {
+
+    input:
+    path files
+    
+    output:
+    path "combined-contaminants.fa"
+    
+    script:
+    """
+    
+    """
+}

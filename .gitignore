@@ -9,3 +9,4 @@ work/*
 .vagrant/*
 test-data
 output
+extra-contam

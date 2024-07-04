@@ -12,13 +12,15 @@ params.outputdir = './output' //Output directory by deafult is at the project di
 params.genome = '' //User input genome fasta
 params.nanopore_reads = 'read.fq' //User input nanopore read fastqc files
 params.nanopore_type = '' //User input dRNA or cDNA based on nanopore sequencing 
-params.contamination = '' // (OPTIONAL) User input contaminat files e.g. RCS  
+params.RCS = './contaminants/RCS.fa'
+params.RCScheck = true //Will check for RCS contamination and remove, user can set to false if they don't want this to run (defult true)
+params.contamination = '' // (OPTIONAL) User input directory with contaminant files
 params.chloroplast_genome = '' // (OPTIONAL) User input chloroplast genome if they want chloroplast % checked
 params.ref_annotation = '' // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
 
 /*
 ========================================================================================
-    Anno-my-nano
+    Anno-my-nano: Create Isoform level genome annotation files using Nanopore reads
 ========================================================================================
     Github   : jadedavis5
     Contact  : 20558259@student.curtin.edu.au
