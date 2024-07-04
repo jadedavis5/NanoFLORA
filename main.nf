@@ -28,7 +28,7 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 workflow_input = params.tool
 switch (workflow_input) {
     case ["loose"]:
-        include { StringTie2WF } from './workflows/'
+        include { StringTie2WF } from './workflows/stringtie.nf'
 	break;
 }
 
