@@ -1,6 +1,6 @@
 // CONTAMINATION_REMOVE subworkflow 
 
-include { SAMTOOLS_PROCESS; SAMTOOLS_STATS } from '../../modules/SAMTOOLS'
+include { SAMTOOLS_PROCESS; SAMTOOLS_STATS; SAMTOOLS_UNMAPPED_FASTQ } from '../../modules/SAMTOOLS'
 include { MINIMAP2_MAP } from '../../modules/MINIMAP2'
 include { MULTIQC  } from '../../modules/QC'
 include { COMBINE_FILES } from '../../modules/BASIC_PROCESSES'
@@ -13,12 +13,19 @@ workflow CONTAMINATION_REMOVE {
 	nanopore_type
 		
     	main:
+		//Map reads
 		ALL_CONTAMINANTS_CH = COMBINE_FILES(contaminants)
 		CONTAM_MAPPED_OUT = MINIMAP2_MAP(reads, ALL_CONTAMINANTS_CH, nanopore_type)
- 		//CHLORO_BAMS = SAMTOOLS_PROCESS(CHLORO_MAPPED_OUT)
-		//CHLORO_MAPPED_STATS_OUT = SAMTOOLS_STATS(CHLORO_BAMS)
-		CHLORO_MULTIQC_OUT = MULTIQC(CONTAM_MAPPED_OUT.collect())
-	
+ 		
+		//Create statistics for contamination 
+		CONTAM_BAMS = SAMTOOLS_PROCESS(CONTAM_MAPPED_OUT)
+		CONTAM_MAPPED_STATS_OUT = SAMTOOLS_STATS(CONTAM_BAMS)
+		CONTAM_MULTIQC_OUT = MULTIQC(CONTAM_MAPPED_STATS_OUT.collect())
+
+		//Generate fastq of unmapped reads
+		UNCONTAM_READS_OUT = SAMTOOLS_UNMAPPED_FASTQ(CONTAM_BAMS)
+			
     	emit:
-    	chloromultiqc_out = CHLORO_MULTIQC_OUT.cleaned
+    	contammultiqc_out = CONTAM_MULTIQC_OUT.qc_html
+	uncontaminated_reads = UNCONTAM_READS_OUT.reads
 }

@@ -36,3 +36,21 @@ process SAMTOOLS_STATS {
 	samtools stats $bam > \${bamBasename}.stats
 	"""
 }
+
+process SAMTOOLS_UNMAPPED_FASTQ {
+	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:1.3--1' }"
+	input:
+	path bam
+	
+	output:
+	path "*.fq.gz", emit: reads
+
+	script:
+	"""
+	bamBasename=\$(cut -d '.' -f 1 <<< $bam)
+	samtools fastq -f 4 $bam > \${bamBasename}_uncontaminated.fq
+	gzip \${bamBasename}_uncontaminated.fq
+	"""
+}
