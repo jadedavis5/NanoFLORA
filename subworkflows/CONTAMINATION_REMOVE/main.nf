@@ -1,7 +1,7 @@
 // CONTAMINATION_REMOVE subworkflow 
 
 include { SAMTOOLS_PROCESS; SAMTOOLS_STATS; SAMTOOLS_UNMAPPED_FASTQ } from '../../modules/SAMTOOLS'
-include { MINIMAP2_MAP } from '../../modules/MINIMAP2'
+include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../../modules/MINIMAP2'
 include { MULTIQC  } from '../../modules/QC'
 include { COMBINE_FILES } from '../../modules/BASIC_PROCESSES'
 
@@ -15,7 +15,8 @@ workflow CONTAMINATION_REMOVE {
     	main:
 		//Map reads
 		ALL_CONTAMINANTS_CH = COMBINE_FILES(contaminants)
-		CONTAM_MAPPED_OUT = MINIMAP2_MAP(reads, ALL_CONTAMINANTS_CH, nanopore_type)
+		ALL_CONTAMINANTS_INDEX = MINIMAP2_INDEX(ALL_CONTAMINANTS_CH, nanopore_type)
+		CONTAM_MAPPED_OUT = MINIMAP2_MAP(reads, ALL_CONTAMINANTS_INDEX, nanopore_type)
  		
 		//Create statistics for contamination 
 		CONTAM_BAMS = SAMTOOLS_PROCESS(CONTAM_MAPPED_OUT)

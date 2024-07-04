@@ -1,5 +1,6 @@
 process MINIMAP2_MAP {
-	debug true
+	label 'medium_task'
+
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
                     'https://depot.galaxyproject.org/singularity/minimap2%3A2.9--1':
                     'quay.io/biocontainers/minimap2:2.0.r191--0' }"
@@ -30,5 +31,37 @@ process MINIMAP2_MAP {
 	else
 		echo 'Valid nanopore type not provided- please input dRNA or cDNA'
 	fi
+	"""
+}
+
+process MINIMAP2_INDEX {
+	label 'medium_task'
+
+	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.9--1':
+                    'quay.io/biocontainers/minimap2:2.0.r191--0' }"
+
+	input:
+	path genome
+	val nanopore_type
+
+	output:
+	path "*.mmi"
+
+	script:
+	"""
+	genomeBasename=\$(basename "$genome" | cut -d '.' -f 1)
+	
+	        if [ "$nanopore_type" == "dRNA" ]
+        then
+        minimap2 -k14 -d \${genomeBasename}.mmi $genome
+
+        elif [ "$nanopore_type" == "cDNA" ]
+        then
+        minimap2 -d \${genomeBasename}.mmi $genome
+
+        else
+                echo 'Valid nanopore type not provided- please input dRNA or cDNA'
+        fi	
 	"""
 }

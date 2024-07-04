@@ -16,4 +16,4 @@ module load nextflow/23.10.0
 module load singularity/4.1.0-nompi
 
 nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads "test-data/*.fastq" --tool loose --chloroplast_genome test-data/chloroplast_genome.fa \
---contamination "extra-contam/*" --nanopore_type dRNA -resume
+--contamination "extra-contam/*" --genome ../Morexv2_files/Morexv2_pseudomolecules.fasta --chopper_quality 15 --nanopore_type dRNA -resume

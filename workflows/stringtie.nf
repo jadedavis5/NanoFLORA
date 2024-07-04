@@ -1,4 +1,3 @@
-genome = params.genome
 ref_annotation = params.ref_annotation
 
 // Include subworkflows
@@ -8,6 +7,7 @@ include { CONTAMINATION_REMOVE } from '../subworkflows/CONTAMINATION_REMOVE'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
+include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../modules/MINIMAP2'
 
 workflow StringTie2WF {
 	// Set reads and quality check	
@@ -42,5 +42,10 @@ workflow StringTie2WF {
 	chopper_quality_ch = channel.value(params.chopper_quality)
 	chopper_length_ch = channel.value(params.chopper_length)
 	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch, chopper_quality_ch, chopper_length_ch) 
+	
+	//Index genome and map reads
+	reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true)
+	indexed_genome_ch = MINIMAP2_INDEX(reference_genome_ch, nanopore_type_ch).first()	
+	aligned_reads_ch = MINIMAP2_MAP(nanopore_reads_filtered_ch, indexed_genome_ch, nanopore_type_ch)
 }
 
