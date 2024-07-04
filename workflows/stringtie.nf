@@ -1,11 +1,13 @@
 genome = params.genome
-contamination = params.contamination
 ref_annotation = params.ref_annotation
 
 // Include subworkflows
 include { QC } from '../subworkflows/QC'
 include { CHLORO_CHECK } from '../subworkflows/CHLORO_CHECK'
 include { CONTAMINATION_REMOVE } from '../subworkflows/CONTAMINATION_REMOVE'
+
+//Include modules 
+include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
 
 workflow StringTie2WF {
 	// Set reads and quality check	
@@ -26,15 +28,19 @@ workflow StringTie2WF {
 		
 		RCS_ch = channel.fromPath(params.RCS)
 		contamination_ch = channel.fromPath(params.contamination).mix(RCS_ch).collect()
-		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch, nanopore_type_ch)
+		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch, nanopore_type_ch).uncontaminated_reads
 
 	} else if ( params.contamination ) {
 		contamination_ch = channel.fromPath(params.contamination).collect()
-		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch, nanopore_type_ch)
+		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch, nanopore_type_ch).uncontaminated_reads
 
 	} else {
 		nanopore_reads_postcontam_ch = channel.fromPath(params.nanopore_reads)
 	}
-		
+	
+	//Filter reads based on quality and length
+	chopper_quality_ch = channel.value(params.chopper_quality)
+	chopper_length_ch = channel.value(params.chopper_length)
+	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch, chopper_quality_ch, chopper_length_ch) 
 }
 
