@@ -2,7 +2,7 @@ process MINIMAP2_MAP {
 	label 'medium_task'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.9--1':
+                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.28--he4a0461_1':
                     'quay.io/biocontainers/minimap2:2.0.r191--0' }"
 	
 	tag { "mapping: ${reads}" }
@@ -38,7 +38,7 @@ process MINIMAP2_INDEX {
 	label 'medium_task'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.9--1':
+                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.28--he4a0461_1':
                     'quay.io/biocontainers/minimap2:2.0.r191--0' }"
 
 	input:

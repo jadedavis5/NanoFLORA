@@ -9,7 +9,7 @@ process SAMTOOLS_PROCESS {
     path sam
     
     output:
-    path "*_sorted.bam"
+    path "*_sorted.bam", emit: sorted_output
     
     script:
     """
