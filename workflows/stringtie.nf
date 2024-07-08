@@ -3,12 +3,10 @@ include { QC } from '../subworkflows/QC'
 include { CONTAMINATION_REMOVE } from '../subworkflows/CONTAMINATION_REMOVE'
 include { MAP_AND_STATS } from '../subworkflows/MAP_AND_STATS'
 include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
+include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
-include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../modules/MINIMAP2'
-include { SAMTOOLS_PROCESS; SAMTOOLS_STATS } from '../modules/SAMTOOLS'
-include { MULTIQC } from '../modules/QC'
 
 workflow StringTie2WF {
 	// Set reads and quality check	
