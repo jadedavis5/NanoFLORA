@@ -13,5 +13,5 @@ workflow STRINGTIE2 {
 		MERGE_OUT = STRINGTIE2_MERGE(ref_annotation, STRINGTIE2_CREATE.collect())
 	
     	emit:
-    	merged_gtf_out = STRINGTIE2_CREATE
+    	merged_gtf_out = MERGE_OUT
 }

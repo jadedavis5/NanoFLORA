@@ -4,6 +4,8 @@ include { CONTAMINATION_REMOVE } from '../subworkflows/CONTAMINATION_REMOVE'
 include { MAP_AND_STATS } from '../subworkflows/MAP_AND_STATS'
 include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
 include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
+include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
+//include { GTF_STATS } from '../subworkflows/GTF_STATS'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
@@ -48,6 +50,12 @@ workflow StringTie2WF {
 	
 	//Run StringTie2
 	ref_annotation_ch = channel.fromPath(params.ref_annotation)
-	STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
+	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
+	
+	//Clean output gtf
+	cleaned_final_gtf = CLEAN_GTF(merged_gtf_ch, reference_genome_ch)
+
+	//Generate stats
+	//GTF_STATS(cleaned_final_gtf)
 }
 
