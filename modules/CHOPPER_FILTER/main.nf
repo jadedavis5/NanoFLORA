@@ -13,7 +13,13 @@ process CHOPPER_FILTER {
         script:
         """
 	basename=\$(basename "$reads" | cut -d '.' -f 1)
-        zcat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
+        
+	if [[ "$reads" == *.gz ]]
+        then
+                zcat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
+        else
+                cat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
+        fi	
 	gzip \${basename}_filtered.fq
         """	
 

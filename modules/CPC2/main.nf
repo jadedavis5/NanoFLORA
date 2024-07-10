@@ -2,7 +2,7 @@ process CPC2 {
 	label 'medium_task'
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'docker://ensemblorg/cpc2:latest':
+                    'docker://quay.io/biocontainers/cpc2:1.0.1--hdfd78af_0':
                     'quay.io/biocontainers/cpc2:1.0.1--hdfd78af_0' }"
 	input:
 	path gff_fa

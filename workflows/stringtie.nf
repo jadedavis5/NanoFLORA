@@ -28,7 +28,6 @@ workflow StringTie2WF {
 	remove = params.contamination || params.SPIKEcheck != false 
 	
 	if ( params.nanopore_type == "dRNA" && params.SPIKEcheck != false ) {
-		remove = true
 		println('dRNA input detected- will run check for and remove Nanopore spike-in seq')
 		
 		if ( params.contamination ) {
@@ -39,7 +38,6 @@ workflow StringTie2WF {
 		}
 
 	} else if ( params.nanopore_type == "cDNA" && params.SPIKEcheck != false ) {
-		remove = true
 		println('cDNA input detected- will run check for and remove Nanopore spike-in seq')
 
                 if ( params.contamination ) {
@@ -50,7 +48,6 @@ workflow StringTie2WF {
                 }
 
 	} else if ( params.contamination ) {
-		remove = true
 		remove_ch = channel.fromPath(params.contamination).collect()
 	
 	} 
