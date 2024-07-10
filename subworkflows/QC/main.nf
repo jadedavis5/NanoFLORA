@@ -1,4 +1,3 @@
-
 // QC subworkflow 
 
 include { FASTQC; MULTIQC  } from '../../modules/QC/'
@@ -6,11 +5,15 @@ include { FASTQC; MULTIQC  } from '../../modules/QC/'
 workflow QC {
 
     take:
-    reads
+    reads // tuple val, path
 
     main:
 	FASTQC_OUT = FASTQC(reads)
- 	MULTIQC_OUT = MULTIQC(FASTQC_OUT.collect())
+	FASTQC_OUT.qc_html
+        	.map { it -> it[1] }
+        	.collect()
+        	.set { fastqc_out }
+ 	MULTIQC_OUT = MULTIQC(fastqc_out)
 	
     emit:
     multiqc_out = MULTIQC_OUT.qc_html

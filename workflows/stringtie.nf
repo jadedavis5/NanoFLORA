@@ -10,13 +10,21 @@ include { GTF_STATS } from '../subworkflows/GTF_STATS'
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
 
-workflow StringTie2WF {
-	// Set reads and quality check	
+if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No ONT type provided, terminating!' }
+if (params.nanopore_type)  { type = params.nanopore_type } else { exit 1, 'No ONT type provided, terminating!' }
 
-	nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true)
-	nanopore_type_ch = channel.value(params.nanopore_type)
-	if (params.nanopore_type) { type = params.nanopore_type } else { exit 1, 'No ONT type provided, terminating!' }
-	QC(nanopore_reads_ch)
+
+workflow StringTie2WF {
+        
+        // format input reads tuple, val, path
+        nanopore_reads_ch
+                .map { path ->
+                def name = "${path.baseName}"
+                tuple(name, path)
+                }.set { reads_input_ch }
+
+	// Set reads and quality check	
+	QC(reads_input_ch)
 	
 	// Perform chloroplast contamination check if genome given
 	if ( params.chloroplast_genome ) {
