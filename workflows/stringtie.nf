@@ -5,7 +5,7 @@ include { MAP_AND_STATS } from '../subworkflows/MAP_AND_STATS'
 include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
 include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
 include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
-//include { GTF_STATS } from '../subworkflows/GTF_STATS'
+include { GTF_STATS } from '../subworkflows/GTF_STATS'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
@@ -15,6 +15,7 @@ workflow StringTie2WF {
 
 	nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true)
 	nanopore_type_ch = channel.value(params.nanopore_type)
+	if (params.nanopore_type) { type = params.nanopore_type } else { exit 1, 'No ONT type provided, terminating!' }
 	QC(nanopore_reads_ch)
 	
 	// Perform chloroplast contamination check if genome given
@@ -56,6 +57,6 @@ workflow StringTie2WF {
 	cleaned_final_gtf = CLEAN_GTF(merged_gtf_ch, reference_genome_ch)
 
 	//Generate stats
-	//GTF_STATS(cleaned_final_gtf)
+	GTF_STATS(cleaned_final_gtf, ref_annotation_ch, reference_genome_ch, nanopore_type_ch)
 }
 

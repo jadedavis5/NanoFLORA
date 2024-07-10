@@ -59,6 +59,6 @@ process BASIC_REMOVE_GFF_SEQ {
 
         script:
         """
-        cat $canonical | awk '{if (\$3 == "transcript") print \$0}' | >> finalMerged_noncanonical-unspliced.gff
+        cat $canonical | awk '{if (\$3 == "transcript") print \$0}' |  >> finalMerged_noncanonical-unspliced.gff
         """
 }

@@ -2,7 +2,7 @@
 
 include { SAMTOOLS_PROCESS; SAMTOOLS_STATS } from '../../modules/SAMTOOLS'
 include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../../modules/MINIMAP2'
-include { MULTIQC  } from '../../modules/QC'
+include { MULTIQC } from '../../modules/QC'
 
 workflow MAP_AND_STATS {
 

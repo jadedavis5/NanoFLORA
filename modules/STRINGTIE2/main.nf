@@ -39,9 +39,9 @@ process STRINGTIE2_MERGE {
         def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
         """
         if [ "$ref_annotation" = "NO_FILE" ]; then
-                stringtie --merge -o merged.gtf $gtf
+                stringtie --merge -o finalmerged.gtf $gtf
         else
-                stringtie -G $ref_annotation -o merged.gtf $gtf
+                stringtie --merge -G $ref_annotation -o finalmerged.gtf $gtf
         fi
         """
 }

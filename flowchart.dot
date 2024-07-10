@@ -1,0 +1,346 @@
+digraph "flowchart" {
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v1 [label="StringTie2WF:QC:FASTQC"];
+v0 -> v1 [label="reads"];
+
+v1 [label="StringTie2WF:QC:FASTQC"];
+v2 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v1 -> v2;
+
+v2 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v3 [label="StringTie2WF:QC:MULTIQC"];
+v2 -> v3;
+
+v3 [label="StringTie2WF:QC:MULTIQC"];
+v4 [shape=point];
+v3 -> v4 [label="multiqc_out"];
+
+v5 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v6 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v5 -> v6;
+
+v6 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v8 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_INDEX"];
+v6 -> v8 [label="genome"];
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v8 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_INDEX"];
+v7 -> v8 [label="nanopore_type"];
+
+v8 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_INDEX"];
+v9 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v8 -> v9;
+
+v9 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v10 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_MAP"];
+v9 -> v10;
+
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v10 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_MAP"];
+v0 -> v10 [label="reads"];
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v10 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_MAP"];
+v7 -> v10 [label="nanopore_type"];
+
+v10 [label="StringTie2WF:CHLORO_CHECK:MINIMAP2_MAP"];
+v11 [label="StringTie2WF:CHLORO_CHECK:SAMTOOLS_PROCESS"];
+v10 -> v11;
+
+v11 [label="StringTie2WF:CHLORO_CHECK:SAMTOOLS_PROCESS"];
+v12 [label="StringTie2WF:CHLORO_CHECK:SAMTOOLS_STATS"];
+v11 -> v12 [label="bam_out"];
+
+v12 [label="StringTie2WF:CHLORO_CHECK:SAMTOOLS_STATS"];
+v13 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v12 -> v13;
+
+v13 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v14 [label="StringTie2WF:CHLORO_CHECK:MULTIQC"];
+v13 -> v14;
+
+v14 [label="StringTie2WF:CHLORO_CHECK:MULTIQC"];
+v15 [shape=point];
+v14 -> v15 [label="multiqc_out"];
+
+v16 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v18 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="mix"];
+v16 -> v18 [label="RCS_ch"];
+
+v17 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v18 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="mix"];
+v17 -> v18;
+
+v18 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="mix"];
+v19 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v18 -> v19;
+
+v19 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v20 [label="StringTie2WF:CONTAMINATION_REMOVE:COMBINE_FILES"];
+v19 -> v20 [label="contaminants"];
+
+v20 [label="StringTie2WF:CONTAMINATION_REMOVE:COMBINE_FILES"];
+v21 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_INDEX"];
+v20 -> v21;
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v21 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_INDEX"];
+v7 -> v21 [label="nanopore_type"];
+
+v21 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_INDEX"];
+v22 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_MAP"];
+v21 -> v22;
+
+v0 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v22 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_MAP"];
+v0 -> v22 [label="reads"];
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v22 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_MAP"];
+v7 -> v22 [label="nanopore_type"];
+
+v22 [label="StringTie2WF:CONTAMINATION_REMOVE:MINIMAP2_MAP"];
+v23 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_PROCESS"];
+v22 -> v23;
+
+v23 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_PROCESS"];
+v24 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_STATS"];
+v23 -> v24;
+
+v24 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_STATS"];
+v25 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v24 -> v25;
+
+v25 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v26 [label="StringTie2WF:CONTAMINATION_REMOVE:MULTIQC"];
+v25 -> v26;
+
+v26 [label="StringTie2WF:CONTAMINATION_REMOVE:MULTIQC"];
+v27 [shape=point];
+v26 -> v27 [label="contammultiqc_out"];
+
+v23 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_PROCESS"];
+v28 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_UNMAPPED_FASTQ"];
+v23 -> v28 [label="bam"];
+
+v28 [label="StringTie2WF:CONTAMINATION_REMOVE:SAMTOOLS_UNMAPPED_FASTQ"];
+v31 [label="StringTie2WF:CHOPPER_FILTER"];
+v28 -> v31 [label="nanopore_reads_postcontam_ch"];
+
+v29 [shape=point,label="",fixedsize=true,width=0.1];
+v31 [label="StringTie2WF:CHOPPER_FILTER"];
+v29 -> v31 [label="chopper_quality_ch"];
+
+v30 [shape=point,label="",fixedsize=true,width=0.1];
+v31 [label="StringTie2WF:CHOPPER_FILTER"];
+v30 -> v31 [label="chopper_length_ch"];
+
+v31 [label="StringTie2WF:CHOPPER_FILTER"];
+v35 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_MAP"];
+v31 -> v35 [label="reads"];
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v33 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_INDEX"];
+v32 -> v33 [label="genome"];
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v33 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_INDEX"];
+v7 -> v33 [label="nanopore_type"];
+
+v33 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_INDEX"];
+v34 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v33 -> v34;
+
+v34 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v35 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_MAP"];
+v34 -> v35;
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v35 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_MAP"];
+v7 -> v35 [label="nanopore_type"];
+
+v35 [label="StringTie2WF:MAP_AND_STATS:MINIMAP2_MAP"];
+v36 [label="StringTie2WF:MAP_AND_STATS:SAMTOOLS_PROCESS"];
+v35 -> v36;
+
+v36 [label="StringTie2WF:MAP_AND_STATS:SAMTOOLS_PROCESS"];
+v37 [label="StringTie2WF:MAP_AND_STATS:SAMTOOLS_STATS"];
+v36 -> v37 [label="bam"];
+
+v37 [label="StringTie2WF:MAP_AND_STATS:SAMTOOLS_STATS"];
+v38 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v37 -> v38;
+
+v38 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v39 [label="StringTie2WF:MAP_AND_STATS:MULTIQC"];
+v38 -> v39;
+
+v39 [label="StringTie2WF:MAP_AND_STATS:MULTIQC"];
+v40 [shape=point];
+v39 -> v40 [label="multiqc_out"];
+
+v41 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v42 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v41 -> v42 [label="ref_annotation"];
+
+v42 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v43 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_CREATE"];
+v42 -> v43;
+
+v36 [label="StringTie2WF:MAP_AND_STATS:SAMTOOLS_PROCESS"];
+v43 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_CREATE"];
+v36 -> v43 [label="bam"];
+
+v43 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_CREATE"];
+v44 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v43 -> v44;
+
+v44 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v45 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_MERGE"];
+v44 -> v45;
+
+v41 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v45 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_MERGE"];
+v41 -> v45 [label="ref_annotation"];
+
+v45 [label="StringTie2WF:STRINGTIE2:STRINGTIE2_MERGE"];
+v46 [label="StringTie2WF:CLEAN_GTF:AGAT_CONVERT"];
+v45 -> v46 [label="gtf"];
+
+v46 [label="StringTie2WF:CLEAN_GTF:AGAT_CONVERT"];
+v47 [label="StringTie2WF:CLEAN_GTF:GT_SORT_TIDY"];
+v46 -> v47;
+
+v47 [label="StringTie2WF:CLEAN_GTF:GT_SORT_TIDY"];
+v48 [label="StringTie2WF:CLEAN_GTF:GT_CDS"];
+v47 -> v48;
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v48 [label="StringTie2WF:CLEAN_GTF:GT_CDS"];
+v32 -> v48 [label="genome"];
+
+v48 [label="StringTie2WF:CLEAN_GTF:GT_CDS"];
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v48 -> v49;
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v32 -> v49 [label="genome"];
+
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v50 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS"];
+v49 -> v50 [label="gff"];
+
+v50 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS"];
+v67 [label="StringTie2WF:GTF_STATS:BASIC_COMBINE_AGAT_RESULTS"];
+v50 -> v67;
+
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v51 [label="StringTie2WF:GTF_STATS:GFFCOMPARE"];
+v49 -> v51 [label="gff"];
+
+v41 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v51 [label="StringTie2WF:GTF_STATS:GFFCOMPARE"];
+v41 -> v51 [label="ref_annotation"];
+
+v51 [label="StringTie2WF:GTF_STATS:GFFCOMPARE"];
+v52 [shape=point];
+v51 -> v52;
+
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v53 [label="StringTie2WF:GTF_STATS:GFFREAD_GFFTOFA"];
+v49 -> v53 [label="gff"];
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v53 [label="StringTie2WF:GTF_STATS:GFFREAD_GFFTOFA"];
+v32 -> v53 [label="genome"];
+
+v53 [label="StringTie2WF:GTF_STATS:GFFREAD_GFFTOFA"];
+v56 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_MAP"];
+v53 -> v56 [label="reads"];
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v54 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_INDEX"];
+v32 -> v54 [label="genome"];
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v54 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_INDEX"];
+v7 -> v54 [label="nanopore_type"];
+
+v54 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_INDEX"];
+v55 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v54 -> v55;
+
+v55 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="first"];
+v56 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_MAP"];
+v55 -> v56;
+
+v7 [shape=point,label="",fixedsize=true,width=0.1];
+v56 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_MAP"];
+v7 -> v56 [label="nanopore_type"];
+
+v56 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MINIMAP2_MAP"];
+v57 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:SAMTOOLS_PROCESS"];
+v56 -> v57;
+
+v57 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:SAMTOOLS_PROCESS"];
+v58 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:SAMTOOLS_STATS"];
+v57 -> v58 [label="bam_out"];
+
+v58 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:SAMTOOLS_STATS"];
+v59 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v58 -> v59;
+
+v59 [shape=circle,label="",fixedsize=true,width=0.1,xlabel="collect"];
+v60 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MULTIQC"];
+v59 -> v60;
+
+v60 [label="StringTie2WF:GTF_STATS:MAP_AND_STATS:MULTIQC"];
+v61 [shape=point];
+v60 -> v61 [label="multiqc_out"];
+
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v62 [label="StringTie2WF:GTF_STATS:GFFREAD_CANONICAL"];
+v49 -> v62 [label="gff"];
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v62 [label="StringTie2WF:GTF_STATS:GFFREAD_CANONICAL"];
+v32 -> v62 [label="genome"];
+
+v62 [label="StringTie2WF:GTF_STATS:GFFREAD_CANONICAL"];
+v63 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS_CANON"];
+v62 -> v63;
+
+v63 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS_CANON"];
+v67 [label="StringTie2WF:GTF_STATS:BASIC_COMBINE_AGAT_RESULTS"];
+v63 -> v67;
+
+v49 [label="StringTie2WF:CLEAN_GTF:AGAT_UTR"];
+v64 [label="StringTie2WF:GTF_STATS:BASIC_REMOVE_GFF_SEQ"];
+v49 -> v64 [label="gff"];
+
+v62 [label="StringTie2WF:GTF_STATS:GFFREAD_CANONICAL"];
+v64 [label="StringTie2WF:GTF_STATS:BASIC_REMOVE_GFF_SEQ"];
+v62 -> v64 [label="canonical"];
+
+v64 [label="StringTie2WF:GTF_STATS:BASIC_REMOVE_GFF_SEQ"];
+v65 [label="StringTie2WF:GTF_STATS:GFFREAD_UNSPLICED"];
+v64 -> v65;
+
+v32 [shape=point,label="",fixedsize=true,width=0.1,xlabel="Channel.fromPath"];
+v65 [label="StringTie2WF:GTF_STATS:GFFREAD_UNSPLICED"];
+v32 -> v65 [label="genome"];
+
+v65 [label="StringTie2WF:GTF_STATS:GFFREAD_UNSPLICED"];
+v66 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS_NONCANON"];
+v65 -> v66;
+
+v66 [label="StringTie2WF:GTF_STATS:AGAT_STATISTICS_NONCANON"];
+v67 [label="StringTie2WF:GTF_STATS:BASIC_COMBINE_AGAT_RESULTS"];
+v66 -> v67;
+
+v67 [label="StringTie2WF:GTF_STATS:BASIC_COMBINE_AGAT_RESULTS"];
+v68 [shape=point];
+v67 -> v68;
+
+}
