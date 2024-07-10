@@ -10,7 +10,6 @@ process MINIMAP2_MAP {
 	input:
 	path reads
 	path genome
-	val nanopore_type
 
 	output:
 	path "*.sam"
@@ -20,11 +19,11 @@ process MINIMAP2_MAP {
 	readBasename=\$(cut -d '.' -f 1 <<< $reads)
 	genomeBasename=\$(basename "$genome" | cut -d '.' -f 1)	
 
-	if [ "$nanopore_type" == "dRNA" ]
+	if [ "${params.nanopore_type}" == "dRNA" ]
 	then
 	minimap2 -ax splice -uf -k14 --split-prefix=foo $genome $reads > \${readBasename}_\${genomeBasename}_aln.sam	
 
-	elif [ "$nanopore_type" == "cDNA" ]
+	elif [ "${params.nanopore_type}" == "cDNA" ]
 	then
 	minimap2 -ax splice --split-prefix=foo $genome $reads > \${readBasename}_\${genomeBasename}_aln.sam
 	
@@ -43,7 +42,6 @@ process MINIMAP2_INDEX {
 
 	input:
 	path genome
-	val nanopore_type
 
 	output:
 	path "*.mmi"
@@ -52,11 +50,11 @@ process MINIMAP2_INDEX {
 	"""
 	genomeBasename=\$(basename "$genome" | cut -d '.' -f 1)
 	
-	        if [ "$nanopore_type" == "dRNA" ]
+	if [ "${params.nanopore_type}" == "dRNA" ]
         then
         minimap2 -k14 -d \${genomeBasename}.mmi $genome
 
-        elif [ "$nanopore_type" == "cDNA" ]
+        elif [ "${params.nanopore_type}" == "cDNA" ]
         then
         minimap2 -d \${genomeBasename}.mmi $genome
 

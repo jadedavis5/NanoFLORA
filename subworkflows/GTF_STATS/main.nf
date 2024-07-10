@@ -15,13 +15,12 @@ workflow GTF_STATS {
     	gff
 	ref_annotation
 	genome
-	nanopore_type
 		
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
 		GFFCOMPARE(gff, ref_annotation)		
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
-		MAP_AND_STATS(GFF_TO_FA, genome, nanopore_type)
+		MAP_AND_STATS(GFF_TO_FA, genome)
 		
 		//Canonical transcript splicing analysis 
 		//1. Get canonical transcripts

@@ -18,7 +18,7 @@ params.chloroplast_genome = '' // (OPTIONAL) User input chloroplast genome if th
 params.ref_annotation = "$projectDir/assets/NO_FILE" // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
 
 //Optional parameters which users may want to change 
-params.RCScheck = true //Will check for RCS contamination and remove, user can set to false if they don't want this to run (defult true if dRNA set)
+params.SPIKEcheck = true //Will check for RCS contamination and remove, user can set to false if they don't want this to run (defult true if dRNA set)
 params.chopper_quality = '10' //Phred score deafult 10
 params.chopper_length = '100' //Minimum length deafult 100
 

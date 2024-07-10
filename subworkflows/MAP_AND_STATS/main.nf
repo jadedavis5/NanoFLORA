@@ -9,11 +9,10 @@ workflow MAP_AND_STATS {
 	take:
     	reads
 	genome
-	nanopore_type
 	
     	main:
-		GENOME_INDEX = MINIMAP2_INDEX(genome, nanopore_type)
-		MAPPED_OUT = MINIMAP2_MAP(reads, GENOME_INDEX.first(), nanopore_type)
+		GENOME_INDEX = MINIMAP2_INDEX(genome)
+		MAPPED_OUT = MINIMAP2_MAP(reads, GENOME_INDEX.first())
  		BAM = SAMTOOLS_PROCESS(MAPPED_OUT)
 		MAPPED_STATS_OUT = SAMTOOLS_STATS(BAM)
 		MULTIQC_OUT = MULTIQC(MAPPED_STATS_OUT.collect())

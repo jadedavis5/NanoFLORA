@@ -6,8 +6,6 @@ process CHOPPER_FILTER {
 
         input:
         path reads
-	val quality
-	val length
 
         output:
         path "*.fq.gz"
@@ -15,7 +13,7 @@ process CHOPPER_FILTER {
         script:
         """
 	basename=\$(basename "$reads" | cut -d '.' -f 1)
-        zcat $reads | chopper -q $quality -l $length > \${basename}_filtered.fq
+        zcat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
 	gzip \${basename}_filtered.fq
         """	
 
