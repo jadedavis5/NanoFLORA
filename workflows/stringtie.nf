@@ -1,6 +1,6 @@
 // Include subworkflows
 include { QC } from '../subworkflows/QC'
-include { CONTAMINATION_REMOVE } from '../subworkflows/CONTAMINATION_REMOVE'
+include { SEQ_REMOVE } from '../subworkflows/SEQ_REMOVE'
 include { MAP_AND_STATS } from '../subworkflows/MAP_AND_STATS'
 include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
 include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
@@ -24,21 +24,38 @@ workflow StringTie2WF {
 		CHLORO_CHECK(nanopore_reads_ch, chloroplast_genome_ch).multiqc_out
 	}
 	
-	// Remove Nanopore sequencing artifacts from reads 
-	if ( params.nanopore_type == "dRNA" && params.SPIKEcheck != "false" ) {
-		println('dRNA input detected- will run check for RCS contamination')
+	// Remove Nanopore sequencing artifacts from reads and contamination if given
+	remove = params.contamination || params.SPIKEcheck != false 
+	
+	if ( params.nanopore_type == "dRNA" && params.SPIKEcheck != false ) {
+		remove = true
+		println('dRNA input detected- will run check for and remove Nanopore spike-in seq')
 		
-		RCS_ch = channel.fromPath(params.RCS)
-		contamination_ch = channel.fromPath(params.contamination).mix(RCS_ch).collect()
-		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch).uncontaminated_reads
+		if ( params.contamination ) {
+			SPIKEdRNA_ch = channel.fromPath(params.SPIKEdRNA).collect()
+			remove_ch = channel.fromPath(params.contamination).mix(SPIKEdRNA_ch).collect()
+		} else {
+			remove_ch = channel.fromPath(params.SPIKEdRNA).collect()
+		}
+
+	} else if ( params.nanopore_type == "cDNA" && params.SPIKEcheck != false ) {
+		remove = true
+		println('cDNA input detected- will run check for and remove Nanopore spike-in seq')
+
+                if ( params.contamination ) {
+                        SPIKEcDNA_ch = channel.fromPath(params.SPIKEcDNA).collect()
+                        remove_ch = channel.fromPath(params.contamination).mix(SPIKEcDNA_ch).collect()
+                } else {
+                        remove_ch = channel.fromPath(params.SPIKEcDNA).collect()
+                }
 
 	} else if ( params.contamination ) {
-		contamination_ch = channel.fromPath(params.contamination).collect()
-		nanopore_reads_postcontam_ch = CONTAMINATION_REMOVE(nanopore_reads_ch, contamination_ch).uncontaminated_reads
-
-	} else {
-		nanopore_reads_postcontam_ch = channel.fromPath(params.nanopore_reads)
-	}
+		remove = true
+		remove_ch = channel.fromPath(params.contamination).collect()
+	
+	} 
+	println(remove)
+	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(nanopore_reads_ch, remove_ch).uncontaminated_reads : channel.fromPath(params.nanopore_reads)	
 	
 	//Filter reads based on quality and length
 	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 

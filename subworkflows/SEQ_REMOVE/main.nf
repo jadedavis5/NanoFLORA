@@ -1,11 +1,11 @@
-// CONTAMINATION_REMOVE subworkflow 
+// SEQ_REMOVE subworkflow 
 
 include { SAMTOOLS_PROCESS; SAMTOOLS_STATS; SAMTOOLS_UNMAPPED_FASTQ } from '../../modules/SAMTOOLS'
 include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../../modules/MINIMAP2'
 include { MULTIQC  } from '../../modules/QC'
 include { COMBINE_FILES } from '../../modules/BASIC_PROCESSES'
 
-workflow CONTAMINATION_REMOVE {
+workflow SEQ_REMOVE {
 
 	take:
     	reads
