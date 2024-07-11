@@ -8,7 +8,7 @@ workflow MAP_AND_STATS {
 
 	take:
     	reads // tuple val, path
-	genome
+	genome // tuple val, path
 	
     	main:
 		GENOME_INDEX = MINIMAP2_INDEX(genome)
