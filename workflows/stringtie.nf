@@ -64,6 +64,7 @@ workflow StringTie2WF {
 	} else {
 		remove_ch = channel.empty()
 	}
+
 	remove_ch
 		.ifEmpty('EMPTY')
 		.map { path ->
@@ -73,7 +74,7 @@ workflow StringTie2WF {
 
 	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads_input_ch, remove_input_ch).uncontaminated_reads : reads_input_ch	
 	//Filter reads based on quality and length
-//	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
+	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
 	
 	//Index genome and map reads
 //	reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true)
