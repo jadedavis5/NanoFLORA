@@ -47,17 +47,17 @@ process AGAT_STATISTICS {
 	tuple val(gff_id), path(gff)
 
 	output:
-	tuple val(gff_id), path("${gff_id}_AGAT_statistics_summary.txt")
+	tuple val(gff_id), path(gff)
 
 	script:
 	"""
 	agat_sp_statistics.pl --gff $gff > ${gff_id}_statistics_AGAT.txt
 
-	grep 'mean transcripts per gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of single exon transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt	
-	grep 'Total transcript length' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of single exon gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt	
+	grep 'mean transcripts per gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_statistics_AGAT_summary.txt
+	grep 'Number of gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_statistics_AGAT_summary.txt
+	grep 'Number of transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> 
+	grep 'Number of single exon transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff}AGAT_statistics_summary.txt	
+	grep 'Total transcript length' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff}AGAT_statistics_summary.txt
+	grep 'Number of single exon gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff}AGAT_statistics_summary.txt	
 	"""
 }

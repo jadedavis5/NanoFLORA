@@ -5,14 +5,14 @@ process GT_SORT_TIDY {
                     'quay.io/biocontainers/genometools-genometools:1.5.9--1' }"
 
         input:
-        path gff
+        tuple val(output_name), path(gff)
 
         output:
-        path "*sortTidy.gff3"
+        tuple val(output_name), path("${output_name}_merged_sortTidy.gff3")
 
         script:
         """
-        gt gff3 -sort -tidy -o merged_sortTidy.gff3 $gff
+        gt gff3 -sort -tidy -o ${output_name}_merged_sortTidy.gff3 $gff
         """	
 }
 
@@ -23,14 +23,14 @@ process GT_CDS {
                     'quay.io/biocontainers/genometools-genometools:1.5.9--1' }"
 
         input:
-        path gff
-	path genome
+        tuple val(output_name), path(gff)
+	tuple val(genome_name), path(genome)
 	
         output:
-        path "*CDS.gff3"
+        tuple val(output_name), path("${output_name}_merged_sortTidyCDS.gff3")
 
         script:
         """
-        gt cds -startcodon -matchdescstart -seqfile $genome -o merged_sortTidyCDS.gff3 $gff
+        gt cds -startcodon -matchdescstart -seqfile $genome -o ${output_name}_merged_sortTidyCDS.gff3 $gff
         """
 }

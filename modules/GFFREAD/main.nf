@@ -5,15 +5,15 @@ process GFFREAD_GFFTOFA {
                     'quay.io/biocontainers/gffread:0.9.8--0' }"
 
 	input:
-	path gff
-	path genome	
+	tuple val(gff_id), path(gff)
+	tuple val(genome_name), path(genome)	
 
 	output:
-	path "finalMerged_gtf2fasta.fa"
+	tuple val(gff_id), path("${gff_id}_gff2fa.fa")
 	
 	script:
 	"""
-	gffread -w finalMerged_gtf2fasta.fa -g $genome $gff
+	gffread -w ${gff_id}_gff2fa.fa -g $genome $gff
 	"""
 }
 
@@ -24,15 +24,15 @@ process GFFREAD_CANONICAL {
                     'quay.io/biocontainers/gffread:0.9.8--0' }"
 
 	input:
-	path gff 
-	path genome
+	tuple val(gff_id), path(gff)
+	tuple val(genome_name), path(genome)
 
 	output:
-	path "finalMerged_canonical.gff"
+	tuple val('canonical'), path("${gff_id}_canonical.gff")
 
 	script:
 	"""
-	gffread -UN -F $gff -g $genome -o finalMerged_canonical.gff
+	gffread -UN -F $gff -g $genome -o ${gff_id}_canonical.gff
 	"""
 }
 
@@ -43,14 +43,14 @@ process GFFREAD_UNSPLICED {
                     'quay.io/biocontainers/gffread:0.9.8--0' }"
 
 	input:
-	path gff
-	path genome
+	tuple val(gff_id), path(noncanonical_unspliced_gff)
+	tuple val(genome_name), path(genome)
 	
 	output:
-	path "finalMerged_noncanonical.gff"
+	tuple val('noncanonical'), path("${gff_id}_noncanonical.gff")
 
 	script:
 	"""
-	gffread -U -F -g $genome -o finalMerged_noncanonical.gff $gff
+	gffread -U -F -g $genome -o ${gff_id}_noncanonical.gff $noncanonical_unspliced_gff
 	"""
 }

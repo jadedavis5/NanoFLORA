@@ -23,26 +23,25 @@ process COMBINE_FILES {
 process BASIC_REMOVE_GFF_SEQ {
 
         input:
-        path original
-        path canonical
+        tuple val(original_gff_id), path(original_gff)
+        tuple val (canonical_gff_id), path(canonical_gff)
 
         output:
-        path "finalMerged_noncanonical-unspliced.gff"
+        tuple val(original_gff_id), path("${original_gff_id}_noncanonical_unspliced.gff")
 
         script:
         """
-        awk -F'\t|;' '{ for(i=1; i<=NF; i++) { if (\$i ~ /^transcript_id=/) { split(\$i, id, "="); print id[2]; } } }' $canonical >> canonical_transcript_id.txt
-
-	grep -v -f canonical_transcript_id.txt $original > finalMerged_noncanonical-unspliced.gff
+        awk -F'\t|;' '{ for(i=1; i<=NF; i++) { if (\$i ~ /^transcript_id=/) { split(\$i, id, "="); print id[2]; } } }' $canonical_gff >> canonical_transcript_id.txt
+	grep -v -f canonical_transcript_id.txt $original_gff > ${original_gff_id}_noncanonical_unspliced.gff
         """
 }
 
 process BASIC_COMBINE_AGAT_RESULTS {
 
 	input:
-	path original
-	path canonical
-	path noncanonical
+	tuple val(original_id), path(original)
+	tuple val(canonical_id), path(canonical)
+	tuple val(noncanonical_id), path(noncanonical)
 
 	output:
 	path "canonical_statistics_summary.txt"

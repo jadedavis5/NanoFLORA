@@ -18,5 +18,5 @@ workflow STRINGTIE2 {
 		MERGE_OUT = STRINGTIE2_MERGE(ref_annotation, stringtie2_gtfs)
 	
     	emit:
-    	merged_gtf_out = MERGE_OUT
+    	gtf = MERGE_OUT
 }

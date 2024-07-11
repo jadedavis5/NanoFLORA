@@ -22,6 +22,7 @@ params.ref_annotation = "$projectDir/assets/NO_FILE" // (OPTIONAL) User input sp
 params.SPIKEcheck = true //Will check for RCS contamination and remove, user can set to false if they don't want this to run (defult true if dRNA set)
 params.chopper_quality = '10' //Phred score deafult 10
 params.chopper_length = '100' //Minimum length deafult 100
+params.out = 'outputAnnotation' //Name of final output files- user can change this
 
 /*
 ========================================================================================

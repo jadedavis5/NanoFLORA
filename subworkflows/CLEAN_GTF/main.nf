@@ -7,7 +7,7 @@ workflow CLEAN_GTF {
 
 	take:
     	gtf
-	genome
+	genome // tuple val, path
 	
     	main:
 		//Add gene enteries
@@ -23,5 +23,5 @@ workflow CLEAN_GTF {
 		GTF_UTR = AGAT_UTR(GTF_CDS, genome)
 	
     	emit:
-    	cleaned_gtf = GTF_UTR
+    	cleaned_gff = GTF_UTR
 }
