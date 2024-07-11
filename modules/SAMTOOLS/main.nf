@@ -6,15 +6,14 @@ process SAMTOOLS_PROCESS {
     tag { "processing SAM: ${sam}" }
 
     input:
-    path sam
+    tuple val(sample_id), path(sam)
     
     output:
-    path "*_sorted.bam", emit: sorted_output
+    tuple val(sample_id), path("${sample_id}_sorted.bam"), emit: sorted_output
     
     script:
     """
-	samBasename=\$(cut -d '.' -f 1 <<< $sam)
-	samtools view -bS $sam | samtools sort > \${samBasename}_sorted.bam
+	samtools view -bS $sam | samtools sort > ${sample_id}_sorted.bam
     """
 }
 
@@ -25,15 +24,14 @@ process SAMTOOLS_STATS {
                     'quay.io/biocontainers/samtools:1.3--1' }"
 
 	input:
-	path bam
+	tuple val(sample_id), path(bam)
 
 	output:
-	path "*.stats"
+	tuple val(sample_id), path("${sample_id}.stats"), emit: stats
 
 	script:
 	"""
-	bamBasename=\$(cut -d '.' -f 1 <<< $bam)
-	samtools stats $bam > \${bamBasename}.stats
+	samtools stats $bam > ${sample_id}.stats
 	"""
 }
 

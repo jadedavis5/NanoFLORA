@@ -8,24 +8,21 @@ process MINIMAP2_MAP {
 	tag { "mapping: ${reads}" }
 
 	input:
-	path reads
-	path genome
+	tuple val(sample_id), path(reads)
+	tuple val(genome_name), path(genome)
 
 	output:
-	path "*.sam"
+	tuple val(sample_id), path("${sample_id}_${genome_name}_aln.sam")
 
 	script:
 	"""
-	readBasename=\$(cut -d '.' -f 1 <<< $reads)
-	genomeBasename=\$(basename "$genome" | cut -d '.' -f 1)	
-
 	if [ "${params.nanopore_type}" == "dRNA" ]
 	then
-	minimap2 -ax splice -uf -k14 --split-prefix=foo $genome $reads > \${readBasename}_\${genomeBasename}_aln.sam	
+	minimap2 -ax splice -uf -k14 --split-prefix=foo $genome $reads > ${sample_id}_${genome_name}_aln.sam	
 
 	elif [ "${params.nanopore_type}" == "cDNA" ]
 	then
-	minimap2 -ax splice --split-prefix=foo $genome $reads > \${readBasename}_\${genomeBasename}_aln.sam
+	minimap2 -ax splice --split-prefix=foo $genome $reads > ${sample_id}_${genome_name}_aln.sam
 	
 	else
 		echo 'Valid nanopore type not provided- please input dRNA or cDNA'
@@ -41,22 +38,20 @@ process MINIMAP2_INDEX {
                     'quay.io/biocontainers/minimap2:2.0.r191--0' }"
 
 	input:
-	path genome
+	tuple val(genome_name), path(genome)
 
 	output:
-	path "*.mmi"
+	tuple val(genome_name), path("${genome_name}.mmi")
 
 	script:
-	"""
-	genomeBasename=\$(basename "$genome" | cut -d '.' -f 1)
-	
+	"""	
 	if [ "${params.nanopore_type}" == "dRNA" ]
         then
-        minimap2 -k14 -d \${genomeBasename}.mmi $genome
+        minimap2 -k14 -d ${genome_name}.mmi $genome
 
         elif [ "${params.nanopore_type}" == "cDNA" ]
         then
-        minimap2 -d \${genomeBasename}.mmi $genome
+        minimap2 -d ${genome_name}.mmi $genome
 
         else
                 echo 'Valid nanopore type not provided- please input dRNA or cDNA'

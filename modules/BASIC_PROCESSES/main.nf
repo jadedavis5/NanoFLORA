@@ -1,10 +1,10 @@
 process COMBINE_FILES {
 
     input:
-    path files
+    tuple val(name), path(files)
     
     output:
-    path "combined-contaminants.fa"
+    tuple val(name), path("combined-contaminants.fa")
     
     script:
     """
@@ -31,7 +31,8 @@ process BASIC_REMOVE_GFF_SEQ {
 
         script:
         """
-        cat $canonical | awk '\$3 == "transcript" {for(i=1;i<=NF;i++) if (\$i ~ /transcript_id=/) {split(\$i, a, "="); print a[2]}}' >> canonical_transcript_id.txt
+        awk -F'\t|;' '{ for(i=1; i<=NF; i++) { if (\$i ~ /^transcript_id=/) { split(\$i, id, "="); print id[2]; } } }' $canonical >> canonical_transcript_id.txt
+
 	grep -v -f canonical_transcript_id.txt $original > finalMerged_noncanonical-unspliced.gff
         """
 }
@@ -48,10 +49,13 @@ process BASIC_COMBINE_AGAT_RESULTS {
 	
 	script:
 	"""
-	for file in $original $canonical $noncanonical
+	for file in $original $canonical
 	do
 	echo "\$file" >> canonical_statistics_summary.txt
-	grep 'Number of transcript' \$file >> canonical_statistics_summary.txt
+	awk '{if (\$3=="transcript") print \$0}' \$file | wc -l >> canonical_statistics_summary.txt
 	done
+	
+	echo "$noncanonical" >> canonical_statistics_summary.txt
+	awk '{if (\$4=="transcript") print \$0}' $noncanonical | wc -l >> canonical_statistics_summary.txt
 	"""
 }

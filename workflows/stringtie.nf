@@ -13,7 +13,6 @@ include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
 if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No ONT type provided, terminating!' }
 if (params.nanopore_type)  { type = params.nanopore_type } else { exit 1, 'No ONT type provided, terminating!' }
 
-
 workflow StringTie2WF {
         
         // format input reads tuple, val, path
@@ -28,8 +27,13 @@ workflow StringTie2WF {
 	
 	// Perform chloroplast contamination check if genome given
 	if ( params.chloroplast_genome ) {
-		chloroplast_genome_ch = channel.fromPath(params.chloroplast_genome).first() //This needs to be first so it can be used multiple times 
-		CHLORO_CHECK(nanopore_reads_ch, chloroplast_genome_ch).multiqc_out
+		channel.fromPath(params.chloroplast_genome)
+		.map { path ->
+                def name = "${path.baseName}"
+                tuple(name, path)
+                }.set { chloroplast_genome_ch }  //This needs to be first so it can be used multiple times 
+		
+	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
 	}
 	
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
@@ -58,25 +62,33 @@ workflow StringTie2WF {
 	} else if ( params.contamination ) {
 		remove_ch = channel.fromPath(params.contamination).collect()
 	
-	} 
-	println(remove)
-	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(nanopore_reads_ch, remove_ch).uncontaminated_reads : channel.fromPath(params.nanopore_reads)	
+	} else {
+		remove_ch = channel.empty()
+	}
+	remove_ch
+		.ifEmpty('EMPTY')
+		.map { path ->
+                def name = "seq_to_remove"
+                tuple(name, path)
+                }.set { remove_input_ch }
+ 
+	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads_input_ch, remove_input_ch).uncontaminated_reads : reads_input_ch	
 	
 	//Filter reads based on quality and length
-	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
+//	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
 	
 	//Index genome and map reads
-	reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true)
-	nanopore_aligned_reads_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, reference_genome_ch).bam_out
+//	reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true)
+//	nanopore_aligned_reads_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, reference_genome_ch).bam_out
 	
 	//Run StringTie2
-	ref_annotation_ch = channel.fromPath(params.ref_annotation)
-	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
+//	ref_annotation_ch = channel.fromPath(params.ref_annotation)
+//	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
 	
 	//Clean output gtf
-	cleaned_final_gtf = CLEAN_GTF(merged_gtf_ch, reference_genome_ch)
+//	cleaned_final_gtf = CLEAN_GTF(merged_gtf_ch, reference_genome_ch)
 
 	//Generate stats
-	GTF_STATS(cleaned_final_gtf, ref_annotation_ch, reference_genome_ch)
+//	GTF_STATS(cleaned_final_gtf, ref_annotation_ch, reference_genome_ch)
 }
 
