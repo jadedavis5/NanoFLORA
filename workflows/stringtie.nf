@@ -31,8 +31,7 @@ workflow StringTie2WF {
 		.map { path ->
                 def name = "${path.baseName}"
                 tuple(name, path)
-                }.set { chloroplast_genome_ch }  //This needs to be first so it can be used multiple times 
-		
+                }.set { chloroplast_genome_ch }
 	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
 	}
 	
@@ -71,9 +70,8 @@ workflow StringTie2WF {
                 def name = "seq_to_remove"
                 tuple(name, path)
                 }.set { remove_input_ch }
- 
+
 	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads_input_ch, remove_input_ch).uncontaminated_reads : reads_input_ch	
-	
 	//Filter reads based on quality and length
 //	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
 	

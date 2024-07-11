@@ -20,7 +20,11 @@ workflow SEQ_REMOVE {
 		//Create statistics for contamination 
 		CONTAM_BAMS = SAMTOOLS_PROCESS(CONTAM_MAPPED_OUT)
 		CONTAM_MAPPED_STATS_OUT = SAMTOOLS_STATS(CONTAM_BAMS)
-		CONTAM_MULTIQC_OUT = MULTIQC(CONTAM_MAPPED_STATS_OUT.collect())
+			.map { it -> it[1] }
+        		.collect()
+        		.set { stats_out }
+		
+		CONTAM_MULTIQC_OUT = MULTIQC(stats_out)
 
 		//Generate fastq of unmapped reads
 		UNCONTAM_READS_OUT = SAMTOOLS_UNMAPPED_FASTQ(CONTAM_BAMS)
