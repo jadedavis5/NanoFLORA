@@ -89,8 +89,8 @@ workflow StringTie2WF {
 	nanopore_aligned_reads_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, genome_input_ch).bam_out
 	
 	//Run StringTie2
-//	ref_annotation_ch = channel.fromPath(params.ref_annotation)
-//	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
+	ref_annotation_ch = channel.fromPath(params.ref_annotation)
+	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch)
 	
 	//Clean output gtf
 //	cleaned_final_gtf = CLEAN_GTF(merged_gtf_ch, reference_genome_ch)

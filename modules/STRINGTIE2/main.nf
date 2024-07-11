@@ -5,20 +5,18 @@ process STRINGTIE2_CREATE {
 
 	input:
 	path optional_annotation
-	path bam
+	tuple val(sample_id), path(bam)
 
 	output:
-	path "*.gtf"
+	tuple val(sample_id), path("${sample_id}_ST.gtf"), emit: gtf
 
 	script:
 	def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
 	"""
-	bamBasename=\$(cut -d '.' -f 1 <<< $bam)
-
 	if [ "$ref_annotation" = "NO_FILE" ]; then
-  		stringtie -L -o \${bamBasename}_ST.gtf $bam
+  		stringtie -L -o ${sample_id}_ST.gtf $bam
 	else
-  		stringtie -G $ref_annotation -L -o \${bamBasename}_ST.gtf $bam
+  		stringtie -G $ref_annotation -L -o ${sample_id}_ST.gtf $bam
 	fi	
 	"""
 }
@@ -30,7 +28,7 @@ process STRINGTIE2_MERGE {
 
         input:
         path optional_annotation
-        path gtf
+        path gtfs
 
         output:
         path "*merged.gtf"
@@ -39,9 +37,9 @@ process STRINGTIE2_MERGE {
         def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
         """
         if [ "$ref_annotation" = "NO_FILE" ]; then
-                stringtie --merge -o finalmerged.gtf $gtf
+                stringtie --merge -o finalmerged.gtf $gtfs
         else
-                stringtie --merge -G $ref_annotation -o finalmerged.gtf $gtf
+                stringtie --merge -G $ref_annotation -o finalmerged.gtf $gtfs
         fi
         """
 }
