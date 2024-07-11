@@ -7,15 +7,20 @@ include { MULTIQC } from '../../modules/QC'
 workflow MAP_AND_STATS {
 
 	take:
-    	reads
-	genome
+    	reads // tuple val, path
+	genome // tuple val, path
 	
     	main:
 		GENOME_INDEX = MINIMAP2_INDEX(genome)
 		MAPPED_OUT = MINIMAP2_MAP(reads, GENOME_INDEX.first())
  		BAM = SAMTOOLS_PROCESS(MAPPED_OUT)
 		MAPPED_STATS_OUT = SAMTOOLS_STATS(BAM)
-		MULTIQC_OUT = MULTIQC(MAPPED_STATS_OUT.collect())
+		MAPPED_STATS_OUT.stats
+		       	.map { it -> it[1] }
+        		.collect()
+        		.set { stats_out }
+
+		MULTIQC_OUT = MULTIQC(stats_out)
 	
     	emit:
     	multiqc_out = MULTIQC_OUT.qc_html

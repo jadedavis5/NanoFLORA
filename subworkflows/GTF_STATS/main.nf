@@ -12,9 +12,9 @@ include { BASIC_REMOVE_GFF_SEQ; BASIC_COMBINE_AGAT_RESULTS } from '../../modules
 workflow GTF_STATS {
 
 	take:
-    	gff
+    	gff // tuple val, path
 	ref_annotation
-	genome
+	genome // tuple val, path
 		
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
@@ -25,16 +25,14 @@ workflow GTF_STATS {
 		//Canonical transcript splicing analysis 
 		//1. Get canonical transcripts
 		CANONICAL_GFF = GFFREAD_CANONICAL(gff, genome)
-		CANONICAL_STATS = AGAT_STATISTICS_CANON(CANONICAL_GFF)
-		
+			
 		//2. Take spliced canonical out of original gff
 		UNSPLICED_NONCANONICAL_GFF = BASIC_REMOVE_GFF_SEQ(gff, CANONICAL_GFF)
 
 		//3. Take unspliced seq out of previous gff to find spliced canonical junctions 
 		NONCANONICAL_GFF = GFFREAD_UNSPLICED(UNSPLICED_NONCANONICAL_GFF, genome)
-		NONCANONICAL_STATS = AGAT_STATISTICS_NONCANON(NONCANONICAL_GFF)
 
-		BASIC_COMBINE_AGAT_RESULTS(ORIGINAL_STATS, CANONICAL_STATS, NONCANONICAL_STATS)
+		BASIC_COMBINE_AGAT_RESULTS(gff, CANONICAL_GFF, NONCANONICAL_GFF)
 	
     	emit:
 	agat = GFF_TO_FA

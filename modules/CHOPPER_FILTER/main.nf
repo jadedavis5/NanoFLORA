@@ -5,22 +5,20 @@ process CHOPPER_FILTER {
                     'quay.io/biocontainers/chopper:0.8.0--hdcf5f25_0' }"
 
         input:
-        path reads
+        tuple val(sample_id), path(reads)
 
         output:
-        path "*.fq.gz"
+        tuple val(sample_id), path("${sample_id}_chopper-filtered.fq.gz")
 
         script:
         """
-	basename=\$(basename "$reads" | cut -d '.' -f 1)
-        
 	if [[ "$reads" == *.gz ]]
         then
-                zcat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
+                zcat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > ${sample_id}_chopper-filtered.fq
         else
-                cat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > \${basename}_filtered.fq
+                cat $reads | chopper -q ${params.chopper_quality} -l ${params.chopper_length} > ${sample_id}_chopper-filtered.fq
         fi	
-	gzip \${basename}_filtered.fq
+	gzip ${sample_id}_chopper-filtered.fq
         """	
 
 }
