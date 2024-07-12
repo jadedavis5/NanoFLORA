@@ -32,7 +32,6 @@ workflow StringTie2WF {
 	// Perform chloroplast contamination check 
 
 	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
-	chloroplast_genome_ch.view()
 	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
 	
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
