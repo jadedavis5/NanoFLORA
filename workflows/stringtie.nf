@@ -9,7 +9,7 @@ include { GTF_STATS } from '../subworkflows/GTF_STATS'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
-
+include { GET_CHLOROPLAST } from '../modules/GET_CHLOROPLAST'
 
 if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
@@ -29,11 +29,11 @@ workflow StringTie2WF {
 	// Set reads and quality check	
 	QC(reads_input_ch)
 	
-	// Perform chloroplast contamination check if genome given
-	if ( params.chloroplast_genome ) {
-		def chloroplast_genome_ch = processChannels(channel.fromPath(params.chloroplast_genome))
-		CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
-	}
+	// Perform chloroplast contamination check 
+
+	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
+	chloroplast_genome_ch.view()
+	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
 	
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
 	remove = params.contamination || params.SPIKEcheck != false 
