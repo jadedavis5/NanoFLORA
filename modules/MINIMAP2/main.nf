@@ -15,18 +15,9 @@ process MINIMAP2_MAP {
 	tuple val(sample_id), path("${sample_id}_${genome_name}_aln.sam")
 
 	script:
+	def map_args = params.nanopore_type == "dRNA" ? "-ax splice -uf -k14" : "-ax splice"
 	"""
-	if [ "${params.nanopore_type}" == "dRNA" ]
-	then
-	minimap2 -ax splice -uf -k14 --split-prefix=foo $genome $reads > ${sample_id}_${genome_name}_aln.sam	
-
-	elif [ "${params.nanopore_type}" == "cDNA" ]
-	then
-	minimap2 -ax splice --split-prefix=foo $genome $reads > ${sample_id}_${genome_name}_aln.sam
-	
-	else
-		echo 'Valid nanopore type not provided- please input dRNA or cDNA'
-	fi
+	minimap2 $map_args --split-prefix=foo $genome $reads > ${sample_id}_${genome_name}_aln.sam
 	"""
 }
 
@@ -44,17 +35,8 @@ process MINIMAP2_INDEX {
 	tuple val(genome_name), path("${genome_name}.mmi")
 
 	script:
-	"""	
-	if [ "${params.nanopore_type}" == "dRNA" ]
-        then
-        minimap2 -k14 -d ${genome_name}.mmi $genome
-
-        elif [ "${params.nanopore_type}" == "cDNA" ]
-        then
-        minimap2 -d ${genome_name}.mmi $genome
-
-        else
-                echo 'Valid nanopore type not provided- please input dRNA or cDNA'
-        fi	
+	def map_args = params.nanopore_type == "dRNA" ? "-k14" : ""
+	"""
+        minimap2 $map_args -d ${genome_name}.mmi $genome	
 	"""
 }
