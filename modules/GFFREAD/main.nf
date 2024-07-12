@@ -32,7 +32,7 @@ process GFFREAD_CANONICAL {
 
 	script:
 	"""
-	gffread -UN -F $gff -g $genome -o ${gff_id}_canonical.gff
+	gffread $gff -UN -F -g $genome -o ${gff_id}_canonical.gff 
 	"""
 }
 
@@ -51,6 +51,6 @@ process GFFREAD_UNSPLICED {
 
 	script:
 	"""
-	gffread -U -F -g $genome -o ${gff_id}_noncanonical.gff $noncanonical_unspliced_gff
+	gffread $noncanonical_unspliced_gff -U -F -g $genome -o ${gff_id}_noncanonical.gff
 	"""
 }

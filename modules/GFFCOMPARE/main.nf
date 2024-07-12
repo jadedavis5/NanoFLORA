@@ -5,16 +5,15 @@ process GFFCOMPARE {
                     'quay.io/biocontainers/gffcompare:0.9.8--0' }"		
 	input:
 	tuple val(gff_id), path(gff)
-	path optional_annotation
 	
 	output:
 	path "${gff_id}_gffcompare_novel-unknown-summary.txt"
 
 	when:
-	ref_annotation != 'NO_FILE'
+	params.ref_annotation
 	
 	script:
-	def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
+	def arg_annotation = params.ref_annotation ? "$optional_annotation" : ""  //Define optional annotation file input
 	"""
 	gffcompare -R -r $ref_annotation -o ${gff_id}_gffcompareCMP $gff
 

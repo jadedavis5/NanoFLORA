@@ -1,45 +1,33 @@
 process STRINGTIE2_CREATE {
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0':
-                    'quay.io/biocontainers/stringtie:1.2.0--1' }"
+                    'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0' }"
 
 	input:
-	path optional_annotation
 	tuple val(sample_id), path(bam)
 
 	output:
 	tuple val(sample_id), path("${sample_id}_ST.gtf"), emit: gtf
 
 	script:
-	def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
+	def arg_annotation = params.ref_annotation ? "-G ${params.ref_annotation}" : ""  //Define optional annotation file input
 	"""
-	if [ "$ref_annotation" = "NO_FILE" ]; then
-  		stringtie -L -o ${sample_id}_ST.gtf $bam
-	else
-  		stringtie -G $ref_annotation -L -o ${sample_id}_ST.gtf $bam
-	fi	
+  	stringtie $arg_annotation -L -o ${sample_id}_ST.gtf $bam	
 	"""
 }
 
 process STRINGTIE2_MERGE {
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0':
-                    'quay.io/biocontainers/stringtie:1.2.0--1' }"
+                    'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0' }"
 
         input:
-        path optional_annotation
         path gtfs
 
         output:
         path "${params.out}_STmerge.gtf"
 
         script:
-        def ref_annotation = optional_annotation.name != 'NO_FILE' ? "$optional_annotation" : 'NO_FILE'  //Define optional annotation file input
+        def arg_annotation = params.ref_annotation ? "-G ${params.ref_annotation}" : ""  //Define optional annotation file input
         """
-        if [ "$ref_annotation" = "NO_FILE" ]; then
-                stringtie --merge -o ${params.out}_STmerge.gtf $gtfs
-        else
-                stringtie --merge -G $ref_annotation -o ${params.out}_STmerge.gtf $gtfs
-        fi
+        stringtie --merge $arg_annotation -o ${params.out}_STmerge.gtf $gtfs
         """
 }
