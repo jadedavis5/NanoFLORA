@@ -3,7 +3,7 @@
 import argparse
 import pandas as pd
 from Bio import SeqIO
-from BCBio import GFF
+import gffutils
 import os
 
 # Define the canonical splice sites
@@ -16,47 +16,44 @@ def analyze_transcript_features(fasta_file, gff_file):
     # Read the genome sequence
     genome = SeqIO.to_dict(SeqIO.parse(fasta_file, "fasta"))
 
-    # Read the GFF file
-    with open(gff_file) as gff_handle:
-        gff_records = list(GFF.parse(gff_handle, base_dict=genome))
+    # Create a gffutils database
+    db = gffutils.create_db(gff_file, dbfn=':memory:', force=True, keep_order=True, merge_strategy='merge', sort_attribute_values=True)
+
     data = []
 
-    for record in gff_records:
-        for feature in record.features:
-            if feature.type == "mRNA" or feature.type == "transcript":
-                transcript_id = feature.id
-                print(transcript_id)
-                exons = [sub_feature for sub_feature in feature.sub_features if sub_feature.type == "exon"]
-                introns = []
+    for transcript in db.features_of_type('transcript'):
+        transcript_id = transcript.id
+        exons = list(db.children(transcript, featuretype='exon', order_by='start'))
+        introns = []
 
-                if len(exons) > 1:
-                    for i in range(len(exons) - 1):
-                        intron_start = exons[i].location.end.position
-                        intron_end = exons[i + 1].location.start.position
-                        intron_seq = record.seq[intron_start:intron_end]
-                        
-                        if feature.strand == 1:  # Positive strand
-                            donor = intron_seq[:2].upper()
-                            acceptor = intron_seq[-2:].upper()
-                        else:  # Negative strand
-                            donor = intron_seq[-2:].reverse_complement().upper()
-                            acceptor = intron_seq[:2].reverse_complement().upper()
+        if len(exons) > 1:
+            for i in range(len(exons) - 1):
+                intron_start = exons[i].end
+                intron_end = exons[i + 1].start
+                intron_seq = genome[transcript.chrom].seq[intron_start:intron_end]
 
-                        introns.append((donor, acceptor))
+                if transcript.strand == '+':  # Positive strand
+                    donor = intron_seq[:2].upper()
+                    acceptor = intron_seq[-2:].upper()
+                else:  # Negative strand
+                    donor = intron_seq[-2:].reverse_complement().upper()
+                    acceptor = intron_seq[:2].reverse_complement().upper()
 
-                type_ = "monoexonic" if len(exons) == 1 else "polyexonic"
-                if type_ == "monoexonic":
-                    type_splicing = "NA"
-                else:
-                    type_splicing = "canonical" if all(is_canonical_splice_site(d, a) for d, a in introns) else "non-canonical"
+                introns.append((donor, acceptor))
 
-                data.append({
-                    "file": os.path.basename(gff_file),
-                    "transcript_id": transcript_id,
-                    "type": type_,
-                    "type_splicing": type_splicing
-                })
-    print(pd.DataFrame(data).head())
+        type_ = "monoexonic" if len(exons) == 1 else "polyexonic"
+        if type_ == "monoexonic":
+            type_splicing = "NA"
+        else:
+            type_splicing = "canonical" if all(is_canonical_splice_site(d, a) for d, a in introns) else "non-canonical"
+
+        data.append({
+            "file": os.path.basename(gff_file),
+            "transcript_id": transcript_id,
+            "type": type_,
+            "type_splicing": type_splicing
+        })
+
     return pd.DataFrame(data)
 
 def summarize_transcripts(df):
@@ -95,7 +92,6 @@ if __name__ == "__main__":
     all_transcript_features = []
 
     for gff_file in gff_files:
-        #print(gff_file)
         transcript_features = analyze_transcript_features(fasta_file, gff_file)
         all_transcript_features.append(transcript_features)
 
@@ -106,4 +102,3 @@ if __name__ == "__main__":
     summary_df.to_csv(f"{output_prefix}transcript_summary.csv", index=False)
 
     print(f"Transcript features and summary saved to '{output_prefix}transcript_features.csv' and '{output_prefix}transcript_summary.csv'.")
-
