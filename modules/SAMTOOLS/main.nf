@@ -1,22 +1,3 @@
-process SAMTOOLS_PROCESS {
-    container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
-                    'quay.io/biocontainers/samtools:1.3--1' }"
-  
-    tag { "processing SAM: ${sam}" }
-
-    input:
-    tuple val(sample_id), path(sam)
-    
-    output:
-    tuple val(sample_id), path("${sample_id}_sorted.bam"), emit: sorted_output
-    
-    script:
-    """
-	samtools view -bS $sam | samtools sort > ${sample_id}_sorted.bam
-    """
-}
-
 process SAMTOOLS_STATS {
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?

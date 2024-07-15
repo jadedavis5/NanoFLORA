@@ -16,7 +16,7 @@ params.SPIKEdRNA = "./nanopore_artifacts/dRNA/*.fa"
 params.SPIKEcDNA = "./nanopore_artifacts/cDNA/*.fa"
 params.contamination = '' // (OPTIONAL) User input directory with contaminant files
 params.chloroplast_genome = '' // (OPTIONAL) User input chloroplast genome if they want chloroplast % checked
-params.ref_annotation = "$projectDir/assets/NO_FILE" // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
+params.ref_annotation = '' // (OPTIONAL) User input species reference annotation file e.g. GTF file from another genotype
 
 //Optional parameters which users may want to change 
 params.INPUT_FTP='https://ftp.ncbi.nlm.nih.gov/refseq/release/plastid/'

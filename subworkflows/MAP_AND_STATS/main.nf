@@ -1,6 +1,6 @@
 // MAP_AND_STATS subworkflow 
 
-include { SAMTOOLS_PROCESS; SAMTOOLS_STATS } from '../../modules/SAMTOOLS'
+include { SAMTOOLS_STATS } from '../../modules/SAMTOOLS'
 include { MINIMAP2_MAP; MINIMAP2_INDEX } from '../../modules/MINIMAP2'
 include { MULTIQC } from '../../modules/QC'
 
@@ -12,8 +12,7 @@ workflow MAP_AND_STATS {
 	
     	main:
 		GENOME_INDEX = MINIMAP2_INDEX(genome)
-		MAPPED_OUT = MINIMAP2_MAP(reads, GENOME_INDEX.first())
- 		BAM = SAMTOOLS_PROCESS(MAPPED_OUT)
+		BAM = MINIMAP2_MAP(reads, GENOME_INDEX.first())
 		MAPPED_STATS_OUT = SAMTOOLS_STATS(BAM)
 		MAPPED_STATS_OUT.stats
 		       	.map { it -> it[1] }
@@ -24,5 +23,5 @@ workflow MAP_AND_STATS {
 	
     	emit:
     	multiqc_out = MULTIQC_OUT.qc_html
-	bam_out = BAM.sorted_output
+	bam_out = BAM.sorted_bam
 }

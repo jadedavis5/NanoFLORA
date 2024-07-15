@@ -32,7 +32,6 @@ workflow StringTie2WF {
 	// Perform chloroplast contamination check 
 
 	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
-	chloroplast_genome_ch.view()
 	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch).multiqc_out
 	
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
@@ -82,8 +81,7 @@ workflow StringTie2WF {
 	nanopore_aligned_reads_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, genome_input_ch).bam_out
 	
 	//Run StringTie2
-	ref_annotation_ch = channel.fromPath(params.ref_annotation)
-	merged_gtf_ch = STRINGTIE2(ref_annotation_ch, nanopore_aligned_reads_ch).gtf
+	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch).gtf
 	
 	merged_gtf_ch
 		.map { path ->
@@ -94,9 +92,7 @@ workflow StringTie2WF {
 	//Clean output gtf
 	cleaned_final_gff = CLEAN_GTF(ST_gtf_ch, genome_input_ch).cleaned_gff
 	
-	cleaned_final_gff.view()
-	
 	//Generate stats
-	GTF_STATS(cleaned_final_gff, ref_annotation_ch, genome_input_ch)
+	GTF_STATS(cleaned_final_gff, genome_input_ch)
 }
 

@@ -13,12 +13,11 @@ workflow GTF_STATS {
 
 	take:
     	gff // tuple val, path
-	ref_annotation
 	genome // tuple val, path
 		
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
-		GFFCOMPARE(gff, ref_annotation)		
+		GFFCOMPARE(gff)		
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		MAP_AND_STATS(GFF_TO_FA, genome)
 		
