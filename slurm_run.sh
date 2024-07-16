@@ -14,6 +14,7 @@
 module load nextflow/23.10.0
 
 module load singularity/4.1.0-nompi
+spack load libsvm
 
 nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads 'test-data/*.fastq' --tool loose \
 --chloroplast_genome ./test-data/chloroplast_genome.fa --genome '../Morexv2_files/Morexv2_pseudomolecules.fasta' --nanopore_type dRNA -resume
