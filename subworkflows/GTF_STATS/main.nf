@@ -8,6 +8,7 @@ include { GFFCOMPARE } from '../../modules/GFFCOMPARE'
 include { GFFREAD_GFFTOFA; GFFREAD_CANONICAL; GFFREAD_UNSPLICED } from '../../modules/GFFREAD'
 include { MAP_AND_STATS } from '../MAP_AND_STATS'
 include { BASIC_REMOVE_GFF_SEQ; BASIC_COMBINE_AGAT_RESULTS } from '../../modules/BASIC_PROCESSES'
+include { CPC2 } from '../../modules/CPC2'
 
 workflow GTF_STATS {
 
@@ -20,7 +21,8 @@ workflow GTF_STATS {
 		GFFCOMPARE(gff)		
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		MAP_AND_STATS(GFF_TO_FA, genome)
-		
+		//CPC2(GFF_TO_FA)	
+	
 		//Canonical transcript splicing analysis 
 		//1. Get canonical transcripts
 		CANONICAL_GFF = GFFREAD_CANONICAL(gff, genome)
