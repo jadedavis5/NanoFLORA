@@ -37,39 +37,20 @@ workflow StringTie2WF {
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
 	remove = params.contamination || params.SPIKEcheck != false 
 	
-	if ( params.nanopore_type == "dRNA" && params.SPIKEcheck != false ) {
-		println('dRNA input detected- will run check for and remove Nanopore spike-in seq')
+	if ( params.SPIKEcheck != false ) {
+		println('Will run check for and remove spike-in seq')
 		
-		if ( params.contamination ) {
-			SPIKEdRNA_ch = channel.fromPath(params.SPIKEdRNA).collect()
-			remove_ch = channel.fromPath(params.contamination).mix(SPIKEdRNA_ch).collect()
-		} else {
-			remove_ch = channel.fromPath(params.SPIKEdRNA).collect()
-		}
-
-	} else if ( params.nanopore_type == "cDNA" && params.SPIKEcheck != false ) {
-		println('cDNA input detected- will run check for and remove Nanopore spike-in seq')
-
-                if ( params.contamination ) {
-                        SPIKEcDNA_ch = channel.fromPath(params.SPIKEcDNA).collect()
-                        remove_ch = channel.fromPath(params.contamination).mix(SPIKEcDNA_ch).collect()
-                } else {
-                        remove_ch = channel.fromPath(params.SPIKEcDNA).collect()
-                }
-
-	} else if ( params.contamination ) {
-		remove_ch = channel.fromPath(params.contamination).collect()
+		technical_seq_ch = channel.fromPath(params.technical_seq).collect()
+		remove_ch = params.contamination ? channel.fromPath(params.contamination).mix(technical_seq_ch).collect() : technical_seq_ch
 	
 	} else {
-		remove_ch = channel.empty()
+		remove_ch = params.contamination ? channel.fromPath(params.contamination).collect() : channel.empty()
 	}
 
 	remove_ch
-		.ifEmpty('EMPTY')
-		.map { path ->
-                def name = "seq_to_remove"
-                tuple(name, path)
-                }.set { remove_input_ch }
+	    	.ifEmpty('EMPTY')
+ 		.map { path -> tuple("seq_to_remove", path) }
+    		.set { remove_input_ch }
 
 	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads_input_ch, remove_input_ch).uncontaminated_reads : reads_input_ch	
 

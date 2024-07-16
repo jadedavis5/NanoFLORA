@@ -9,6 +9,8 @@ include { GFFREAD_GFFTOFA; GFFREAD_CANONICAL; GFFREAD_UNSPLICED } from '../../mo
 include { MAP_AND_STATS } from '../MAP_AND_STATS'
 include { BASIC_REMOVE_GFF_SEQ; BASIC_COMBINE_AGAT_RESULTS } from '../../modules/BASIC_PROCESSES'
 include { CANONICAL_STATS } from '../../modules/CANONICAL_STATS'
+include { CPC2 } from '../../modules/CPC2'
+
 
 workflow GTF_STATS {
 
@@ -22,6 +24,9 @@ workflow GTF_STATS {
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		MAP_AND_STATS(GFF_TO_FA, genome)
 		CANONICAL_STATS(gff, genome)
+
+		//CPC2(GFF_TO_FA)	
+
 	
     	emit:
 	agat = GFF_TO_FA
