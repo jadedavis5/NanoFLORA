@@ -29,7 +29,7 @@ def analyze_transcript_features(fasta_file, gff_file):
         if len(exons) > 1:
             for i in range(len(exons) - 1):
                 intron_start = exons[i].end
-                intron_end = exons[i + 1].start
+                intron_end = exons[i + 1].start - 1 
                 intron_seq = genome[transcript.chrom].seq[intron_start:intron_end]
 
                 if transcript.strand == '+':  # Positive strand
@@ -63,16 +63,16 @@ def summarize_transcripts(df):
         total = len(group)
         monoexonic_count = len(group[group['type'] == 'monoexonic'])
         polyexonic_count = len(group[group['type'] == 'polyexonic'])
-        canonical_count = len(group[group['type_splicing'] == 'canonical'])
-        non_canonical_count = len(group[group['type_splicing'] == 'non-canonical'])
+        canonical_count = len(group[(group['type_splicing'] == 'canonical') & (group['type'] == 'polyexonic')])
+        non_canonical_count = len(group[(group['type_splicing'] == 'non-canonical') & (group['type'] == 'polyexonic')])
 
         summary_data.append({
             "file": file_name,
             "total_transcripts": total,
-            "monoexonic": monoexonic_count / total * 100,
-            "polyexonic": polyexonic_count / total * 100,
-            "canonical": canonical_count / total * 100,
-            "non_canonical": non_canonical_count / total * 100,
+            "monoexonic": round(monoexonic_count / total * 100, 2),
+            "polyexonic": round(polyexonic_count / total * 100, 2),
+            "canonical": round(canonical_count / polyexonic_count * 100, 2),
+            "non_canonical": round(non_canonical_count / polyexonic_count * 100, 2),
         })
 
     return pd.DataFrame(summary_data)
