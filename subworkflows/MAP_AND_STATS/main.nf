@@ -24,4 +24,5 @@ workflow MAP_AND_STATS {
     	emit:
     	multiqc_out = MULTIQC_OUT.qc_html
 	bam_out = BAM.sorted_bam
+	stats = stats_out
 }

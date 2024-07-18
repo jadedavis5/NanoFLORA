@@ -10,6 +10,7 @@ include { MAP_AND_STATS } from '../MAP_AND_STATS'
 include { BASIC_REMOVE_GFF_SEQ; BASIC_COMBINE_AGAT_RESULTS } from '../../modules/BASIC_PROCESSES'
 include { CANONICAL_STATS } from '../../modules/CANONICAL_STATS'
 include { CPC2 } from '../../modules/CPC2'
+include { SUMMARY_STATS } from '../../modules/SUMMARY_STATS'
 
 
 workflow GTF_STATS {
@@ -20,10 +21,12 @@ workflow GTF_STATS {
 		
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
-		GFFCOMPARE(gff)		
+		GFF_COMPARISON = params.ref_annotation ? GFFCOMPARE(gff) : "$projectDir/assets/NO_FILE"	
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
-		MAP_AND_STATS(GFF_TO_FA, genome)
-		CANONICAL_STATS(gff, genome)
+		TRANSCRIPT_MAPPING = MAP_AND_STATS(GFF_TO_FA, genome).stats
+		SPLICE_SITES = CANONICAL_STATS(gff, genome)
+		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS, GFF_COMPARISON, TRANSCRIPT_MAPPING, SPLICE_SITES)
+		
 
 		//CPC2(GFF_TO_FA)	
 
