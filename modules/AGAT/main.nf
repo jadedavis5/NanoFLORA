@@ -51,13 +51,6 @@ process AGAT_STATISTICS {
 
 	script:
 	"""
-	agat_sp_statistics.pl --gff $gff > ${gff_id}_statistics_AGAT.txt
-
-	grep 'mean transcripts per gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of single exon transcript' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt	
-	grep 'Total transcript length' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt
-	grep 'Number of single exon gene' ${gff_id}_statistics_AGAT.txt | head -1 >> ${gff_id}_AGAT_statistics_summary.txt	
+	agat_sp_statistics.pl --gff $gff -o ${gff_id}_statistics_AGAT.txt
 	"""
 }

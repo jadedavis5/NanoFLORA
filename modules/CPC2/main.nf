@@ -2,8 +2,8 @@ process CPC2 {
 	label 'medium_task'
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/cpc2%3A1.0.1--hdfd78af_0':
-                    'quay.io/biocontainers/cpc2:1.0.1--hdfd78af_0' }"
+                    'https://depot.galaxyproject.org/singularity/rnasamba%3A0.2.5--py37h8902056_1':
+                    'quay.io/biocontainers/rnasamba:0.1.0--py_1' }"
 	input:
 	tuple val(gff_id), path(gff_fa)
 
@@ -12,12 +12,6 @@ process CPC2 {
 
 	script:
 	"""
-	/usr/local/bin/CPC2.py -i $gff_fa -o ${params.out}.coding_potential.txt
-	
-	#echo 'coding' >> ${params.out}.coding_potential_summary.txt
-	#cut -f 8 ${params.out}.coding_potential.txt | grep -w 'coding' | wc -l >> ${params.out}.coding_potential_summary.txt
-
-	#echo 'noncoding' >> ${params.out}.coding_potential_summary.txt
-	#cut -f 8 ${params.out}.coding_potential.txt | grep -w 'noncoding' | wc -l >> ${params.out}.coding_potential_summary.txt
+	rnasamba classify ${params.out}_codingPotential.tsv $gff_fa full_length_weights.hdf5
 	"""
 }
