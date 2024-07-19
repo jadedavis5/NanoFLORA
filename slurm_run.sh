@@ -10,10 +10,11 @@
 #SBATCH --output=%x-%j.out
 #SBATCH --error=%x-%j.err
 #SBATCH --export=ALL
+#SBATCH --mem=10GB
 
 module load nextflow/23.10.0
 
-module load singularity/4.1.0-nompi
+module load singularity/4.1.0-slurm
 spack load libsvm
 
 nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads 'test-data/*.fastq' --tool loose \

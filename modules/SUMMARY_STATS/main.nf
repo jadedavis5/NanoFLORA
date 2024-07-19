@@ -5,7 +5,8 @@ process SUMMARY_STATS {
        	path gffcompare_summary // OR false if a reference genome wasn't input
        	path(mapping_stats)  //samtools .stats file of transcript mapping to genome
       	path splice_site_summary //summary output file from canonical_stats
-
+	path rnasamba
+	
        output:
        path "${params.out}_summaryStatistics.csv"
 
