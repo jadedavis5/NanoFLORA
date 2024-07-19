@@ -47,7 +47,7 @@ process AGAT_STATISTICS {
 	tuple val(gff_id), path(gff)
 
 	output:
-	tuple val(gff_id), path("${gff_id}_AGAT_statistics_summary.txt")
+	tuple val(gff_id), path("${gff_id}_statistics_AGAT.txt")
 
 	script:
 	"""
