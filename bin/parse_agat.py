@@ -1,61 +1,66 @@
 #!/usr/bin/env python3
 
+import re
 import argparse
 import pandas as pd
 
-class AgatSpStatisticsParser:
-    def __init__(self, data):
-        self.data = data
-    
-    def parse_transcript_data(self):
-        # Split the data into sections
-        sections = self.data.strip().split("\n\n")
-        
-        # Identify the indexes of each section
-        isoforms_start = sections[0]
-        longest_isoform_start = sections[1]
-        
-        # Parse each section into a dictionary
-        isoforms = self.parse_section(isoforms_start)
-        longest_isoform = self.parse_section(longest_isoform_start)
-        
-        # Combine both dictionaries into a single DataFrame
-        df = pd.DataFrame([isoforms, longest_isoform], index=['Isoforms', 'Longest Isoform'])
-        
+class AgatSpStatistics:
+    def __init__(self, file_path):
+        self.file_path = file_path
+        self.data = []
+        self.switch_to_longest_isoform = False
+
+    def parse(self):
+        with open(self.file_path, 'r') as file:
+            first_part = True
+            number_of_gene_count = 0
+            for line in file:
+                line = line.strip()
+                if line and not line.startswith('---'):  # Skip lines starting with '---'
+                    if "Number of gene" in line:
+                        number_of_gene_count += 1
+                        if number_of_gene_count > 1:
+                            self.switch_to_longest_isoform = True
+                            first_part = False
+                    
+                    if not self.switch_to_longest_isoform and "Shortest intron into three_prime_utr part (bp)" in line:
+                        first_part = False
+
+                    try:
+                        key, value, category = self._parse_line(line, first_part)
+                        self.data.append((key, value, category))
+                    except ValueError as e:
+                        print(f"Skipping line due to error: {e}")
+
+    def _parse_line(self, line, first_part):
+        match = re.match(r"(.*?)([\d]+(\.\d+)?)([a-zA-Z]*)$", line)
+        if match:
+            key = match.group(1).strip()
+            value = match.group(2) + match.group(4)
+            category = "Isoforms" if not self.switch_to_longest_isoform else "Longest isoform"
+            return key, value, category
+        else:
+            raise ValueError(f"Line format is incorrect: {line}")
+
+    def to_dataframe(self):
+        df = pd.DataFrame(self.data, columns=['Feature', 'Value', 'Group'])
         return df
 
-    def parse_section(self, section):
-        lines = section.strip().split('\n')
-        data = {}
-        for line in lines:
-            if ':' in line:
-                key, value = line.split(':', 1)
-                data[key.strip()] = value.strip()
-        return data
-
 def main():
-
-    modules = {
-        "agat_sp_statistics": "Parse transcript data including isoforms and longest isoform statistics."
-    }
-
-    parser = argparse.ArgumentParser(description='Parse transcript data.')
-    parser.add_argument('--module', type=str, required=True, help='Specify the module for output parsing. Available modules: ' + ', '.join(modules.keys()))
-    parser.add_argument('file', type=str, help='Path to the input file containing transcript data')
-
+    parser = argparse.ArgumentParser(description="Parse statistics files.")
+    parser.add_argument('--module', type=str, required=True, choices=['agat_sp_statistics'], help="Module to execute")
+    parser.add_argument('--input', type=str, required=True, help="Path to the input statistics file")
+    parser.add_argument('--output', type=str, required=True, help="Path to the output CSV file")
     args = parser.parse_args()
 
-    # Read the input file
-    with open(args.file, 'r') as file:
-        data = file.read()
-
-    if args.module in modules:
-        if args.module == "agat_sp_statistics":
-            parser = AgatSpStatisticsParser(data)
-            df = parser.parse_transcript_data()
-            print(df.to_string())
-    else:
-        print(f"Module '{args.module}' is not recognized. Available modules are: {', '.join(modules.keys())}.")
+    if args.module == 'agat_sp_statistics':
+        agat_parser = AgatSpStatistics(args.input)
+        agat_parser.parse()
+        df = agat_parser.to_dataframe()
+        with open(args.output, 'w') as f:
+            f.write("#Feature,Value,Group\n")
+            df.to_csv(f, index=False, header=False)
+        print(f"Data has been written to {args.output}")
 
 if __name__ == "__main__":
     main()

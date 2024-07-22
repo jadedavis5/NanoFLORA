@@ -1,8 +1,9 @@
 // GTF_STATS subworkflow 
 
 include { AGAT_STATISTICS } from '../../modules/AGAT'
-include { AGAT_STATISTICS as AGAT_STATISTICS_CANON } from '../../modules/AGAT'
-include { AGAT_STATISTICS as AGAT_STATISTICS_NONCANON } from '../../modules/AGAT'
+//include { AGAT_STATISTICS as AGAT_STATISTICS_CANON } from '../../modules/AGAT'
+//include { AGAT_STATISTICS as AGAT_STATISTICS_NONCANON } from '../../modules/AGAT'
+include { AGATPARSE_STATS } from '../../modules/PYTHON_PARSERS'
 
 include { GFFCOMPARE } from '../../modules/GFFCOMPARE'
 include { GFFREAD_GFFTOFA; GFFREAD_CANONICAL; GFFREAD_UNSPLICED } from '../../modules/GFFREAD'
@@ -21,14 +22,14 @@ workflow GTF_STATS {
 	genome_index // tuple val, path
 	
     	main:
-		ORIGINAL_STATS = AGAT_STATISTICS(gff)
+		ORIGINAL_STATS = AGATPARSE_STATS(AGAT_STATISTICS(gff).agat_out)
 		GFF_COMPARISON = params.ref_annotation ? GFFCOMPARE(gff) : "$projectDir/assets/NO_FILE"	
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 
 		TRANSCRIPT_MAPPING = MAP_AND_STATS(GFF_TO_FA, genome, genome_index).stats
 		SPLICE_SITES = CANONICAL_STATS(gff, genome)
 		CODING_POTENTIAL = RNASAMBA(GFF_TO_FA)
-		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS, GFF_COMPARISON, TRANSCRIPT_MAPPING, SPLICE_SITES, CODING_POTENTIAL)
+		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS.agat_parased, GFF_COMPARISON, TRANSCRIPT_MAPPING, SPLICE_SITES, CODING_POTENTIAL)
 
 	
     	emit:

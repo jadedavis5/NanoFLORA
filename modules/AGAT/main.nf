@@ -47,10 +47,10 @@ process AGAT_STATISTICS {
 	tuple val(gff_id), path(gff)
 
 	output:
-	tuple val(gff_id), path("${gff_id}_statistics_AGAT.txt")
+	tuple val(gff_id), path("${gff_id}_statistics_AGAT.out"), emit: agat_out
 
 	script:
 	"""
-	agat_sp_statistics.pl --gff $gff -o ${gff_id}_statistics_AGAT.txt
+	agat_sp_statistics.pl --gff $gff -o ${gff_id}_statistics_AGAT.out
 	"""
 }
