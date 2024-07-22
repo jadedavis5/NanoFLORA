@@ -10,6 +10,7 @@
 #SBATCH --output=%x-%j.out
 #SBATCH --error=%x-%j.err
 #SBATCH --export=ALL
+#SBATCH --mem=10GB
 
 module load nextflow/23.10.0
 

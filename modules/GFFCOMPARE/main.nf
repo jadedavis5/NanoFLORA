@@ -13,9 +13,9 @@ process GFFCOMPARE {
 	params.ref_annotation
 	
 	script:
-	def arg_annotation = params.ref_annotation ? "$optional_annotation" : ""  //Define optional annotation file input
+	def arg_annotation = params.ref_annotation ?: ""  //Define optional annotation file input
 	"""
-	gffcompare -R -r $ref_annotation -o ${gff_id}_gffcompareCMP $gff
+	gffcompare -R -r $arg_annotation -o ${gff_id}_gffcompareCMP $gff
 
 	tmap=${gff_id}_gffcompareCMP/*.tmap
 	

@@ -8,7 +8,10 @@ include { GFFCOMPARE } from '../../modules/GFFCOMPARE'
 include { GFFREAD_GFFTOFA; GFFREAD_CANONICAL; GFFREAD_UNSPLICED } from '../../modules/GFFREAD'
 include { MAP_AND_STATS } from '../MAP_AND_STATS'
 include { BASIC_REMOVE_GFF_SEQ; BASIC_COMBINE_AGAT_RESULTS } from '../../modules/BASIC_PROCESSES'
-include { CPC2 } from '../../modules/CPC2'
+include { CANONICAL_STATS } from '../../modules/CANONICAL_STATS'
+include { RNASAMBA } from '../../modules/RNASAMBA'
+include { SUMMARY_STATS } from '../../modules/SUMMARY_STATS'
+
 
 workflow GTF_STATS {
 
@@ -19,22 +22,14 @@ workflow GTF_STATS {
 	
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
-		GFFCOMPARE(gff)		
+		GFF_COMPARISON = params.ref_annotation ? GFFCOMPARE(gff) : "$projectDir/assets/NO_FILE"	
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
-		MAP_AND_STATS(GFF_TO_FA, genome, genome_index)
-		//CPC2(GFF_TO_FA)	
-	
-		//Canonical transcript splicing analysis 
-		//1. Get canonical transcripts
-		CANONICAL_GFF = GFFREAD_CANONICAL(gff, genome)
-			
-		//2. Take spliced canonical out of original gff
-		UNSPLICED_NONCANONICAL_GFF = BASIC_REMOVE_GFF_SEQ(gff, CANONICAL_GFF)
 
-		//3. Take unspliced seq out of previous gff to find spliced canonical junctions 
-		NONCANONICAL_GFF = GFFREAD_UNSPLICED(UNSPLICED_NONCANONICAL_GFF, genome)
+		TRANSCRIPT_MAPPING = MAP_AND_STATS(GFF_TO_FA, genome).stats
+		SPLICE_SITES = CANONICAL_STATS(gff, genome)
+		CODING_POTENTIAL = RNASAMBA(GFF_TO_FA)
+		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS, GFF_COMPARISON, TRANSCRIPT_MAPPING, SPLICE_SITES, CODING_POTENTIAL)
 
-		BASIC_COMBINE_AGAT_RESULTS(gff, CANONICAL_GFF, NONCANONICAL_GFF)
 	
     	emit:
 	agat = GFF_TO_FA
