@@ -40,7 +40,7 @@ process SUMMARY_STATS {
 
         input:
         tuple val(agat_gff_id), path(agat_summary_file)  //summary file of no. genes & transcripts, mean trans>        path gffcompare_summary // OR false if a reference genome wasn't input
-        path(gff_compare)  // gffcompare out (optional)
+        //path(gff_compare)  // gffcompare out (optional)
         path splice_site_summary //summary output file from canonical_stats
         path rnasamba
 

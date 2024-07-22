@@ -28,9 +28,10 @@ workflow GTF_STATS {
 
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		CODING_POTENTIAL = RNASAMBAPARSE_STATS(RNASAMBA(GFF_TO_FA).rnasamba_out)
-
+		
+		// add here summary for gff compare
 		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS.agat_parased, 
-					GFF_COMPARISON,
+					//GFF_COMPARISON,
 					SPLICE_SITES,
 					CODING_POTENTIAL)
 
