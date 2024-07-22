@@ -63,6 +63,7 @@ workflow StringTie2WF {
 	nanopore_aligned_reads_ch = map_out_ch.bam_out
 	genome_index_ch = map_out_ch.index_out
 	
+	
 	//Run StringTie2
 	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch).gtf
 	
@@ -74,7 +75,7 @@ workflow StringTie2WF {
 
 	//Clean output gtf
 	cleaned_final_gff = CLEAN_GTF(ST_gtf_ch, genome_input_ch).cleaned_gff
-	
+
 	//Generate stats
 	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch)
 }

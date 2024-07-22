@@ -26,5 +26,6 @@ workflow MAP_AND_STATS {
     	multiqc_out = MULTIQC_OUT.qc_html
 	bam_out = BAM.sorted_bam
 	index_out = GENOME_INDEX
+	stats = stats_out
 
 }
