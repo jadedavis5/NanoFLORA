@@ -18,11 +18,13 @@ workflow GTF_STATS {
 	take:
     	gff // tuple val, path
 	genome // tuple val, path
-		
+	genome_index	
+	
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
 		GFF_COMPARISON = params.ref_annotation ? GFFCOMPARE(gff) : "$projectDir/assets/NO_FILE"	
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
+
 		TRANSCRIPT_MAPPING = MAP_AND_STATS(GFF_TO_FA, genome).stats
 		SPLICE_SITES = CANONICAL_STATS(gff, genome)
 		CODING_POTENTIAL = RNASAMBA(GFF_TO_FA)

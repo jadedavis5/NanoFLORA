@@ -9,9 +9,10 @@ workflow MAP_AND_STATS {
 	take:
     	reads // tuple val, path
 	genome // tuple val, path
+	optional_index
 	
     	main:
-		GENOME_INDEX = MINIMAP2_INDEX(genome)
+		GENOME_INDEX = optional_index ? optional_index : MINIMAP2_INDEX(genome)
 		BAM = MINIMAP2_MAP(reads, GENOME_INDEX.first())
 		MAPPED_STATS_OUT = SAMTOOLS_STATS(BAM)
 		MAPPED_STATS_OUT.stats
@@ -24,5 +25,6 @@ workflow MAP_AND_STATS {
     	emit:
     	multiqc_out = MULTIQC_OUT.qc_html
 	bam_out = BAM.sorted_bam
-	stats = stats_out
+	index_out = GENOME_INDEX
+
 }
