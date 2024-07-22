@@ -47,9 +47,9 @@ class AgatSpStatistics:
         return df
 
 def main():
-    parser = argparse.ArgumentParser(description="Parse statistics files.")
-    parser.add_argument('--module', type=str, required=True, choices=['agat_sp_statistics'], help="Module to execute")
-    parser.add_argument('--input', type=str, required=True, help="Path to the input statistics file")
+    parser = argparse.ArgumentParser(description="Parse AGAT statistics files.")
+    parser.add_argument('--module', type=str, required=True, choices=['agat_sp_statistics'], help="Module from AGAT to parse.")
+    parser.add_argument('--input', type=str, required=True, help="Path to the input AGAT statistics file.")
     parser.add_argument('--output', type=str, required=True, help="Path to the output CSV file")
     args = parser.parse_args()
 
@@ -58,7 +58,7 @@ def main():
         agat_parser.parse()
         df = agat_parser.to_dataframe()
         with open(args.output, 'w') as f:
-            f.write("#Feature,Value,Group\n")
+            f.write("Feature,Value,Group\n")
             df.to_csv(f, index=False, header=False)
         print(f"Data has been written to {args.output}")
 

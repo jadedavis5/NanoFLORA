@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+#!/usr/bin/env python3
+
 import argparse
 import pandas as pd
 from Bio import SeqIO
@@ -29,7 +31,7 @@ def analyze_transcript_features(fasta_file, gff_file):
         if len(exons) > 1:
             for i in range(len(exons) - 1):
                 intron_start = exons[i].end
-                intron_end = exons[i + 1].start - 1 
+                intron_end = exons[i + 1].start - 1
                 intron_seq = genome[transcript.chrom].seq[intron_start:intron_end]
 
                 if transcript.strand == '+':  # Positive strand
@@ -70,9 +72,8 @@ def summarize_transcripts(df):
             "file": file_name,
             "total_transcripts": total,
             "monoexonic": round(monoexonic_count / total * 100, 2),
-            "polyexonic": round(polyexonic_count / total * 100, 2),
-            "canonical": round(canonical_count / polyexonic_count * 100, 2),
-            "non_canonical": round(non_canonical_count / polyexonic_count * 100, 2),
+            "polyexonic_canonical": round(canonical_count / polyexonic_count * 100, 2),
+            "polyexonic_non_canonical": round(non_canonical_count / polyexonic_count * 100, 2),
         })
 
     return pd.DataFrame(summary_data)
@@ -99,6 +100,16 @@ if __name__ == "__main__":
     combined_df.to_csv(f"{output_prefix}transcript_features.csv", index=False)
 
     summary_df = summarize_transcripts(combined_df)
-    summary_df.to_csv(f"{output_prefix}transcript_summary.csv", index=False)
+    
+    summary_output = []
+    for _, row in summary_df.iterrows():
+        summary_output.append(f"transcripts_analyzed,{row['total_transcripts']}")
+        summary_output.append(f"monoexonic,{row['monoexonic']}")
+        summary_output.append(f"polyexonic_canonical,{row['polyexonic_canonical']}")
+        summary_output.append(f"polyexonic_noncanonical,{row['polyexonic_non_canonical']}")
 
+    with open(f"{output_prefix}transcript_summary.csv", 'w') as f:
+        f.write("type,percentage\n")
+        f.write("\n".join(summary_output))
+    
     print(f"Transcript features and summary saved to '{output_prefix}transcript_features.csv' and '{output_prefix}transcript_summary.csv'.")
