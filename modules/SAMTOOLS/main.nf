@@ -32,3 +32,20 @@ process SAMTOOLS_UNMAPPED_FASTQ {
 	gzip ${sample_id}_uncontaminated.fq
 	"""
 }
+
+process SAMTOOLS_INDEX {
+        container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:1.3--1' }"
+
+	input:
+        tuple val(sample_id), path(bam)
+	
+	output:
+	tuple path(bam), path("${sample_id}*.csi")
+
+	script:
+	"""
+	samtools index -c $bam
+	"""
+}

@@ -34,22 +34,9 @@ params.out = 'outputAnnotation' //Name of final output files- user can change th
 ----------------------------------------------------------------------------------------
 */
 
-workflow_input = params.tool
-switch (workflow_input) {
-    case ["loose"]:
-        include { StringTie2WF } from './workflows/stringtie.nf'
-	break;
-}
+include { StringTie2WF } from './workflows/stringtie.nf'
 
 workflow {
-	if (params.tool == "loose") {
-		println("StringTie2 workflow being used")
-		StringTie2WF()
-
-	} else {
-	
-		println("Please provide the correct input options")
-
-	}		 
+	StringTie2WF() 
 }
 
