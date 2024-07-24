@@ -27,6 +27,7 @@ workflow StringTie2WF {
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
 	def genome_input_ch = processChannels(reference_genome_ch)
+	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	// Set reads and quality check	
 	QC(reads_input_ch)
@@ -69,7 +70,7 @@ workflow StringTie2WF {
 	genome_index_ch = map_out_ch.index_out
 	
 	//Run StringTie2
-	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch).gtf
+	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
 	
 	merged_gtf_ch
 		.map { path ->
@@ -81,6 +82,6 @@ workflow StringTie2WF {
 	cleaned_final_gff = CLEAN_GTF(ST_gtf_ch, genome_input_ch).cleaned_gff
 	
 	//Generate stats
-	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch)
+	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
 }
 

@@ -16,10 +16,11 @@ workflow GTF_STATS {
     	gff // tuple val, path
 	genome // tuple val, path
 	genome_index	
+	annotation
 	
     	main:
 		ORIGINAL_STATS = AGAT_STATISTICS(gff)
-		GFFCOMPARE(gff)		
+		GFFCOMPARE(gff, annotation)		
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		MAP_AND_STATS(GFF_TO_FA, genome, genome_index)
 		//CPC2(GFF_TO_FA)	
