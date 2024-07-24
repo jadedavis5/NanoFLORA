@@ -30,8 +30,7 @@ process ISOQUANT_RUN {
 
 	"""
 	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
-
-	echo 'blah'	
+	
 	if [ params.ref_annotation ]
 	then
 	mv $params.out/OUT/OUT.extended_annotation.gtf ${params.out}_IQ.gtf
