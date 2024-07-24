@@ -10,6 +10,7 @@ include { GTF_STATS } from '../subworkflows/GTF_STATS'
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
 include { GET_CHLOROPLAST } from '../modules/GET_CHLOROPLAST'
+include { PORECHOP_ABI } from '../modules/PORECHOP_ABI'
 
 if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
@@ -25,6 +26,7 @@ def processChannels(ch_input) {
 workflow StringTie2WF {      
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
+	def genome_input_ch = processChannels(reference_genome_ch)
 
 	// Set reads and quality check	
 	QC(reads_input_ch)
@@ -34,6 +36,10 @@ workflow StringTie2WF {
 	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
 	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch, false).multiqc_out
 	
+	//Trim possible adapter sequences from reads
+	adapters_ch = channel.fromPath(params.adapters)
+	trimmed_reads_ch = PORECHOP_ABI(reads_input_ch, adapters_ch.first())
+
 	// Remove Nanopore sequencing artifacts from reads and contamination if given
 	remove = params.contamination || params.SPIKEcheck != false 
 	
@@ -52,13 +58,12 @@ workflow StringTie2WF {
  		.map { path -> tuple("seq_to_remove", path) }
     		.set { remove_input_ch }
 
-	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads_input_ch, remove_input_ch, false).uncontaminated_reads : reads_input_ch	
+	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(trimmed_reads_ch, remove_input_ch, false).uncontaminated_reads : trimmed_reads_ch	
 
 	//Filter reads based on quality and length
 	nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch) 
 	
 	//Index genome and map reads
-	def genome_input_ch = processChannels(reference_genome_ch)
 	map_out_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, genome_input_ch, false)
 	nanopore_aligned_reads_ch = map_out_ch.bam_out
 	genome_index_ch = map_out_ch.index_out
