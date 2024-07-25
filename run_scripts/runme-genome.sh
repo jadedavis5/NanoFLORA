@@ -18,5 +18,4 @@ nextflow run main.nf -profile pawsey_setonix,singularity \
 	--nanopore_reads "/scratch/y95/kgagalova/anno-my-nano/test/*.fastq" --tool loose \
 	--genome /scratch/y95/kgagalova/anno-my-nano/test/Morex_pseudomolecules_v2.fasta \
 	--nanopore_type dRNA \
-	--ref_annotation /scratch/y95/kgagalova/anno-my-nano/test/Morex.gff \
 	-resume 

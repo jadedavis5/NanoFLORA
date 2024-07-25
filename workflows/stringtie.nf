@@ -66,7 +66,7 @@ workflow StringTie2WF {
 	
 	
 	//Run StringTie2
-	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch,  annotation_ch).gtf
+	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
 	
 	merged_gtf_ch
 		.map { path ->

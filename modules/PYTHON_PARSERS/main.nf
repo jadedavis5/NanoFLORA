@@ -34,24 +34,54 @@ process RNASAMBAPARSE_STATS {
         """
 }
 
+
+process GFFSTATSPARSE_STATS {
+
+     container "community.wave.seqera.io/library/pandas:2.2.2--bd3db773995db54e"
+
+     input:
+     path(gff_compare)  // gffcompare out (optional)
+
+     output:
+     path "${params.out}_statistics_gffcompare.csv"
+
+     script:
+     """
+     parse_gffcompare.py ${gff_compare} ${params.out}_statistics_gffcompare.csv
+     """
+}
+
 process SUMMARY_STATS {
 
 	container "community.wave.seqera.io/library/pandas:2.2.2--bd3db773995db54e"
 
         input:
-        tuple val(agat_gff_id), path(agat_summary_file)  //summary file of no. genes & transcripts, mean trans>        path gffcompare_summary // OR false if a reference genome wasn't input
-        //path(gff_compare)  // gffcompare out (optional)
+        tuple val(agat_gff_id), path(agat_summary_file)  //summary file of no. genes & tr
+        path(gff_compare)  // gffcompare out (optional)
         path splice_site_summary //summary output file from canonical_stats
         path rnasamba
 
-       output:
-       path "${params.out}_summaryStatistics.csv"
+	output:
+	path "${params.out}_summaryStatistics.csv"
 
-       script:
-       """
-       parse_summary.py --input_summary ${agat_summary_file} \
+	script:
+
+	if (gff_compare.name == "NO_FILE") {
+	"""      
+	parse_summary.py --input_summary ${agat_summary_file} \
 		--input_coding_potential ${rnasamba} \
 		--input_type_ss ${splice_site_summary} \
 		--output ${params.out}_summaryStatistics.csv
-       """
+	"""
+
+	} else {
+
+	"""
+	parse_summary.py --input_summary ${agat_summary_file} \
+                --input_coding_potential ${rnasamba} \
+                --input_type_ss ${splice_site_summary} \
+		--input_gffcompare ${gff_compare} \
+                --output ${params.out}_summaryStatistics.csv
+	"""
+    }
 }

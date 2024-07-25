@@ -1,7 +1,7 @@
 // GTF_STATS subworkflow 
 
 include { AGAT_STATISTICS } from '../../modules/AGAT'
-include { AGATPARSE_STATS; RNASAMBAPARSE_STATS; SUMMARY_STATS } from '../../modules/PYTHON_PARSERS'
+include { AGATPARSE_STATS; RNASAMBAPARSE_STATS; GFFSTATSPARSE_STATS; SUMMARY_STATS } from '../../modules/PYTHON_PARSERS'
 
 include { GFFCOMPARE } from '../../modules/GFFCOMPARE'
 include { GFFREAD_GFFTOFA } from '../../modules/GFFREAD'
@@ -23,18 +23,25 @@ workflow GTF_STATS {
     	main:
 		ORIGINAL_STATS = AGATPARSE_STATS(AGAT_STATISTICS(gff).agat_out)
 
-		GFF_COMPARISON = GFFCOMPARE(gff, annotation)	
-
 		SPLICE_SITES = CANONICAL_STATS(gff, genome)
 
 		GFF_TO_FA = GFFREAD_GFFTOFA(gff, genome)
 		CODING_POTENTIAL = RNASAMBAPARSE_STATS(RNASAMBA(GFF_TO_FA).rnasamba_out)
-		
-		// add here summary for gff compare
-		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS.agat_parased, 
-					//GFF_COMPARISON,
-					SPLICE_SITES,
-					CODING_POTENTIAL)
+
+		if (params.ref_annotation) {
+
+			GFF_COMPARISON = GFFSTATSPARSE_STATS(GFFCOMPARE(gff, annotation).gff_stats)
+			
+
+		} else {
+			
+			GFF_COMPARISON = "$projectDir/assets/NO_FILE"			
+		}
+
+		SUMMARY = SUMMARY_STATS(ORIGINAL_STATS.agat_parased,
+                                        GFF_COMPARISON,
+                                        SPLICE_SITES,
+                                        CODING_POTENTIAL)
 
 	
     	emit:
