@@ -1,5 +1,6 @@
 process RNASAMBA {
-		
+	label 'medium_task'	
+	
         container = 'oras://community.wave.seqera.io/library/rnasamba:0.2.5--1a7a2f19cfd58389'
 	beforeScript 'wget https://raw.githubusercontent.com/apcamargo/RNAsamba/master/data/full_length_weights.hdf5'
 	

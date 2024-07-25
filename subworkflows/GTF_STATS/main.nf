@@ -18,11 +18,12 @@ workflow GTF_STATS {
     	gff // tuple val, path
 	genome // tuple val, path
 	genome_index // tuple val, path
+	annotation
 	
     	main:
 		ORIGINAL_STATS = AGATPARSE_STATS(AGAT_STATISTICS(gff).agat_out)
 
-		GFF_COMPARISON = params.ref_annotation ? GFFCOMPARE(gff) : "$projectDir/assets/NO_FILE"	
+		GFF_COMPARISON = GFFCOMPARE(gff, annotation)	
 
 		SPLICE_SITES = CANONICAL_STATS(gff, genome)
 
