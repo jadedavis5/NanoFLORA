@@ -33,9 +33,14 @@ params.out = 'outputAnnotation' //Name of final output files- user can change th
 ----------------------------------------------------------------------------------------
 */
 
-include { StringTie2WF } from './workflows/stringtie.nf'
+include { GENOME_BASED } from './workflows/genome_based.nf'
 
 workflow {
-	StringTie2WF()
+	if ( params.genome ) {
+		GENOME_BASED()
+	}
+	else {
+		GENOME_FREE()
+	}
 }
 
