@@ -33,14 +33,14 @@ params.out = 'outputAnnotation' //Name of final output files- user can change th
 ----------------------------------------------------------------------------------------
 */
 
-include { GENOME_BASED } from './workflows/genome_based.nf'
+include { GENOME_BASED_ANNOTATION } from './workflows/genome_based_annotation.nf'
 
 workflow {
 	if ( params.genome ) {
-		GENOME_BASED()
+		GENOME_BASED_ANNOTATION()
 	}
 	else {
-		GENOME_FREE()
+		GENOME_FREE_ANNOTATION()
 	}
 }
 

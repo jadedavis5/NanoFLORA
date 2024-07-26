@@ -23,7 +23,7 @@ def processChannels(ch_input) {
     }
 }
 
-workflow GENOME_BASED {      
+workflow GENOME_BASED_ANNOTATION {      
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
