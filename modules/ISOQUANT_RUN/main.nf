@@ -28,14 +28,16 @@ process ISOQUANT_RUN {
 		complete_annotation = ""
 	}
 
+	if (annotation.name == 'NO_FILE') {
+	"""	
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
+	mv $params.out/OUT/OUT.transcript_models.gtf ${params.out}_IQ.gtf
+	"""
+
+	} else {
 	"""
 	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
-
-	if [ "$annotation" != "NO_FILE" ]
-	then
 	mv $params.out/OUT/OUT.extended_annotation.gtf ${params.out}_IQ.gtf
-	else
-	mv $params.out/OUT/OUT.transcript_models.gtf ${params.out}_IQ.gtf	
-	fi
 	"""
+	}
 }
