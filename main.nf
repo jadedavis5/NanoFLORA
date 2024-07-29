@@ -20,6 +20,7 @@ params.ref_annotation = '' // (OPTIONAL) User input species reference annotation
 //Optional parameters which users may want to change 
 params.INPUT_FTP='https://ftp.ncbi.nlm.nih.gov/refseq/release/plastid/'
 params.SPIKEcheck = true //Will check for RCS contamination and remove, user can set to false if they don't want this to run (defult true if dRNA set)
+params.adapters = './bin/adapters.txt'
 params.chopper_quality = '10' //Phred score deafult 10
 params.chopper_length = '100' //Minimum length deafult 100
 params.out = 'outputAnnotation' //Name of final output files- user can change this
