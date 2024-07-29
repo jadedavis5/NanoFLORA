@@ -6,6 +6,7 @@ include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
 include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
 include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
+include { ISOQUANT } from '../subworkflows/ISOQUANT'
 
 //Include modules 
 include { CHOPPER_FILTER } from '../modules/CHOPPER_FILTER'
@@ -22,7 +23,7 @@ def processChannels(ch_input) {
     }
 }
 
-workflow StringTie2WF {      
+workflow GENOME_BASED_ANNOTATION {      
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
@@ -65,9 +66,14 @@ workflow StringTie2WF {
 	genome_index_ch = map_out_ch.index_out
 	
 	
-	//Run StringTie2
-	merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
-	
+	//Run isoform annotation
+	if ( params.tool == 'loose' ) {
+		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+	} else if ( params.tool == 'strict' ) {
+		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+	} else {
+		println('Run mode not given- please use --tool loose OR --tool strict')
+	}
 	merged_gtf_ch
 		.map { path ->
                 def name = params.out
