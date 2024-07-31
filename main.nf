@@ -34,22 +34,14 @@ params.out = 'outputAnnotation' //Name of final output files- user can change th
 ----------------------------------------------------------------------------------------
 */
 
-workflow_input = params.tool
-switch (workflow_input) {
-    case ["loose"]:
-        include { StringTie2WF } from './workflows/stringtie.nf'
-	break;
-}
+include { GENOME_BASED_ANNOTATION } from './workflows/genome_based_annotation.nf'
 
 workflow {
-	if (params.tool == "loose") {
-		println("StringTie2 workflow being used")
-		StringTie2WF()
-
-	} else {
-	
-		println("Please provide the correct input options")
-
-	}		 
+	if ( params.genome ) {
+		GENOME_BASED_ANNOTATION()
+	}
+	else {
+		GENOME_FREE_ANNOTATION()
+	}
 }
 
