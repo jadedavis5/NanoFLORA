@@ -1,5 +1,6 @@
 // Include subworkflows
 include { QC } from '../QC'
+include { QC as QC_POST } from '../QC'
 include { SEQ_REMOVE } from '../SEQ_REMOVE'
 include { MAP_AND_STATS } from '../MAP_AND_STATS'
 
@@ -21,24 +22,19 @@ workflow PRE_PROCESS_NANO {
 		MAP_AND_STATS(reads, chloro_genome, false).multiqc_out
 
 		//Remove spikein seq + and given contamination 
-		remove = params.contamination || params.SPIKEcheck != false
-
-	        if ( params.SPIKEcheck != false ) {
-        	        println('Will run check for and remove spike-in seq')
-
+	        if ( params.contamination ) {
                 	technical_seq_ch = channel.fromPath(params.technical_seq).collect()
-                	remove_ch = params.contamination ? channel.fromPath(params.contamination).mix(technical_seq_ch).collect() : technical_seq_ch
+                	remove_ch = channel.fromPath(params.contamination).mix(technical_seq_ch).collect()
 
         	} else {
-                	remove_ch = params.contamination ? channel.fromPath(params.contamination).collect() : channel.empty()
+                	remove_ch = channel.fromPath(params.technical_seq).collect()
         	}	
-
+		
         	remove_ch
-                	.ifEmpty('EMPTY')
                 	.map { path -> tuple("seq_to_remove", path) }
                 	.set { remove_input_ch }
 
-        	nanopore_reads_postcontam_ch = remove ? SEQ_REMOVE(reads, remove_input_ch, false).uncontaminated_reads : reads
+        	nanopore_reads_postcontam_ch = SEQ_REMOVE(reads, remove_input_ch, false).uncontaminated_reads
 		
 		//Trim reads
 		adapters_ch = channel.fromPath(params.adapters)
@@ -47,6 +43,9 @@ workflow PRE_PROCESS_NANO {
 		//Filter reads based on quality and length
 		nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_trimmed_ch).filtered_reads
 	
+		//Post pre-processing quality check 
+		QC_POST(nanopore_reads_filtered_ch)
+
         emit:
         reads_out = nanopore_reads_filtered_ch
 

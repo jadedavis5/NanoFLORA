@@ -11,7 +11,6 @@ include { GET_CHLOROPLAST } from '../modules/GET_CHLOROPLAST'
 
 if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
-if (params.nanopore_type)  { type = params.nanopore_type } else { exit 1, 'No ONT type provided, terminating!' }
 
 def processChannels(ch_input) {
     return ch_input.map { path ->
@@ -48,10 +47,10 @@ workflow GENOME_BASED_ANNOTATION {
 		.map { path ->
                 def name = params.out
                 tuple(name, path)
-                }.set { ST_gtf_ch }	
+                }.set { gtf_ch }	
 
 	//Clean output gtf
-	cleaned_final_gff = CLEAN_GTF(ST_gtf_ch, genome_input_ch).cleaned_gff
+	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
 
 	//Generate stats
 	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
