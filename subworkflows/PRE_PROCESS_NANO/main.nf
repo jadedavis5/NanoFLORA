@@ -2,7 +2,6 @@
 include { QC } from '../QC'
 include { QC as QC_POST } from '../QC'
 include { SEQ_REMOVE } from '../SEQ_REMOVE'
-include { MAP_AND_STATS } from '../MAP_AND_STATS'
 
 //Include modules
 include { CHOPPER_FILTER } from '../../modules/CHOPPER_FILTER'
@@ -12,14 +11,10 @@ workflow PRE_PROCESS_NANO {
 
         take:
         reads // tuple val, path
-        chloro_genome // tuple val, path
 
         main:
                 //Check read quality
 		QC(reads)
-	
-		//Check chloroplast %
-		MAP_AND_STATS(reads, chloro_genome, false).multiqc_out
 
 		//Remove spikein seq + and given contamination 
 	        if ( params.contamination ) {

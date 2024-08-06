@@ -1,5 +1,6 @@
 // Include subworkflows
 include { MAP_AND_STATS } from '../subworkflows/MAP_AND_STATS'
+include { MAP_AND_STATS as CHLORO_CHECK } from '../subworkflows/MAP_AND_STATS'
 include { STRINGTIE2 } from '../subworkflows/STRINGTIE2'
 include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
@@ -23,10 +24,13 @@ workflow GENOME_BASED_ANNOTATION {
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
-	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())	
 
-	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch, chloroplast_genome_ch)
-	nanopore_reads_filtered_ch.view()
+	//Check chloroplast %
+	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
+	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
+
+	//Pre-process reads 
+	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
 	def genome_input_ch = processChannels(reference_genome_ch)
