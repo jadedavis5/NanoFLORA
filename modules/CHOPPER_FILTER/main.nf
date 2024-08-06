@@ -8,7 +8,7 @@ process CHOPPER_FILTER {
         tuple val(sample_id), path(reads)
 
         output:
-        tuple val(sample_id), path("${sample_id}_chopper-filtered.fq.gz")
+        tuple val(sample_id), path("${sample_id}_chopper-filtered.fq.gz"), emit: 'filtered_reads'
 
         script:
         """
