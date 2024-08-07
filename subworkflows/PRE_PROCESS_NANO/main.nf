@@ -14,7 +14,7 @@ workflow PRE_PROCESS_NANO {
 
         main:
                 //Check read quality
-		QC(reads)
+		QC('pre-processing', reads)
 
 		//Remove spikein seq + and given contamination 
 	        if ( params.contamination ) {
@@ -39,7 +39,7 @@ workflow PRE_PROCESS_NANO {
 		nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_trimmed_ch).filtered_reads
 	
 		//Post pre-processing quality check 
-		QC_POST(nanopore_reads_filtered_ch)
+		QC_POST('post-processing', nanopore_reads_filtered_ch)
 
         emit:
         reads_out = nanopore_reads_filtered_ch

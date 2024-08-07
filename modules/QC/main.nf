@@ -26,13 +26,14 @@ process MULTIQC {
                 'quay.io/biocontainers/multiqc:0.9.1a0--py27_0' }"
 
 	input:
+	val(name)
 	path(dir)
 
 	output:
-	tuple path("multiqc_data"), path("multiqc_report.html"), emit: qc_html
+	tuple path("${name}_data"), path("${name}.html"), emit: qc_html
 
 	script:
 	"""
-	multiqc . --force
+	multiqc . -n $name --force
 	"""
 }

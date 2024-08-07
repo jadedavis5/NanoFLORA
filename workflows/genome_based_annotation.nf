@@ -27,14 +27,14 @@ workflow GENOME_BASED_ANNOTATION {
 
 	//Check chloroplast %
 	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
-	CHLORO_CHECK(reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
+	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
 
 	//Pre-process reads 
 	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
 	def genome_input_ch = processChannels(reference_genome_ch)
-	map_out_ch = MAP_AND_STATS(nanopore_reads_filtered_ch, genome_input_ch, false)
+	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
 	nanopore_aligned_reads_ch = map_out_ch.bam_out
 	genome_index_ch = map_out_ch.index_out
 	
