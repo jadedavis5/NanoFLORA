@@ -8,7 +8,7 @@ include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
 
 //Include modules 
-include { GET_CHLOROPLAST } from '../modules/GET_CHLOROPLAST'
+include { CHLOROPLAST_DOWNLOAD } from '../modules/CHLOROPLAST_DOWNLOAD'
 
 if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
@@ -26,7 +26,7 @@ workflow GENOME_BASED_ANNOTATION {
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-	def chloroplast_genome_ch = processChannels(GET_CHLOROPLAST())
+	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
 	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
 
 	//Pre-process reads 

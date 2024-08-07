@@ -1,4 +1,4 @@
-process GET_CHLOROPLAST {
+process CHLOROPLAST_DOWNLOAD {
 	
 	output:
 	path "concatenated_output.fna.gz"
