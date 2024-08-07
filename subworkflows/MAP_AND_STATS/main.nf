@@ -7,6 +7,7 @@ include { MULTIQC } from '../../modules/QC'
 workflow MAP_AND_STATS {
 
 	take:
+	qc_name
     	reads // tuple val, path
 	genome // tuple val, path
 	optional_index
@@ -20,7 +21,7 @@ workflow MAP_AND_STATS {
         		.collect()
         		.set { stats_out }
 
-		MULTIQC_OUT = MULTIQC(stats_out)
+		MULTIQC_OUT = MULTIQC(qc_name, stats_out)
 	
     	emit:
     	multiqc_out = MULTIQC_OUT.qc_html

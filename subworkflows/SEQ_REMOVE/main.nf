@@ -15,7 +15,7 @@ workflow SEQ_REMOVE {
     	main:
 		//Map reads
 		ALL_CONTAMINANTS_CH = COMBINE_FILES(contaminants)
-		CONTAM_MAPPED_OUT = MAP_AND_STATS(reads, ALL_CONTAMINANTS_CH, optional_index)
+		CONTAM_MAPPED_OUT = MAP_AND_STATS('contamination_mapping', reads, ALL_CONTAMINANTS_CH, optional_index)
 
 		//Generate fastq of unmapped reads
 		UNCONTAM_READS_OUT = SAMTOOLS_UNMAPPED_FASTQ(CONTAM_MAPPED_OUT.bam_out)
