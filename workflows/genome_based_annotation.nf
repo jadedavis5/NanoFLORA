@@ -15,8 +15,8 @@ if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, check
 
 def processChannels(ch_input) {
     return ch_input.map { path ->
-        def name = "${path.baseName}"
-        tuple(name, path)
+        def name = "${path.getBaseName(path.name.endsWith('.gz')? 2: 1)}"
+	tuple(name, path)
     }
 }
 
