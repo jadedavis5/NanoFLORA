@@ -6,6 +6,7 @@ include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
 include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
+include { PRE_PROCESS_SHORT } from '../subworkflows/PRE_PROCESS_SHORT'
 
 //Include modules 
 include { CHLOROPLAST_DOWNLOAD } from '../modules/CHLOROPLAST_DOWNLOAD'
@@ -26,37 +27,71 @@ workflow GENOME_BASED_ANNOTATION {
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
-	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
+//	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
+//	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
 
 	//Pre-process reads 
-	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
+//	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
-	def genome_input_ch = processChannels(reference_genome_ch)
-	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
-	nanopore_aligned_reads_ch = map_out_ch.bam_out
-	genome_index_ch = map_out_ch.index_out
+//	def genome_input_ch = processChannels(reference_genome_ch)
+//	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
+//	nanopore_aligned_reads_ch = map_out_ch.bam_out
+//	genome_index_ch = map_out_ch.index_out
 	
+	//Pre-process short reads
+	//if ( params.short_reads ) {
+	//	short_reads_ch = channel.fromPath(params.short_reads)
+	//	def short_reads_input_ch = processChannels(short_reads_ch)
+	//	short_reads_aligned = PRE_PROCESS_SHORT(short_reads)
+	//}
 	
+	//Match up long and short read
+	if ( params.config ) {
+		def links = new File(params.config).text.split('\n')
+		def finalList = []
+		
+		for (line in links) {
+			def files = line.split(',').collect { it.trim() }
+			def longRead = files[0]
+ 			def shortRead = files.size() > 1 ? files[1] : null
+   			def pairedRead = files.size() > 2 ? files[2] : null
+			def long_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.nanopore_reads).parent, longRead)?.getAt(0) ?: { println "No files found"; null }
+			def gz = new File(long_fastq_file).name.endsWith('.gz') ? 2 : 1
+			def long_name = new File(long_fastq_file).getBaseName(gz)
+			def short_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, shortRead)?.getAt(0) ?: { println "No files found"; null }
+		
+			def input_tuple
+			if (pairedRead) {
+				def paired_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, pairedRead)?.getAt(0) ?: { println "No files found"; null }
+				input_tuple = [long_name, short_fastq_file, paired_fastq_file]
+			} else {
+				input_tuple = [long_name, short_fastq_file, 'NO_FILE']
+			}
+			finalList << input_tuple
+		}
+			short_reads_input = Channel.fromList(finalList)
+			short_reads_bam = PRE_PROCESS_SHORT(short_reads_input)
+			
+	}	
 	//Run isoform annotation
-	if ( params.tool == 'loose' ) {
-		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
-	} else if ( params.tool == 'strict' ) {
-		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
-	} else {
-		println('Run mode not given- please use --tool loose OR --tool strict')
-	}
-	merged_gtf_ch
-		.map { path ->
-                def name = params.out
-                tuple(name, path)
-                }.set { gtf_ch }	
+//	if ( params.tool == 'loose' ) {
+//		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+//	} else if ( params.tool == 'strict' ) {
+//		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+//	} else {
+//		println('Run mode not given- please use --tool loose OR --tool strict')
+//	}
+//	merged_gtf_ch
+//		.map { path ->
+//                def name = params.out
+//                tuple(name, path)
+//                }.set { gtf_ch }	
 
 	//Clean output gtf
-	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
+//	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
 
 	//Generate stats
-	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
+//	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
 }
 
