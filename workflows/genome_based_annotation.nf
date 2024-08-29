@@ -6,7 +6,7 @@ include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
 include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
-include { PRE_PROCESS_SHORT } from '../subworkflows/PRE_PROCESS_SHORT'
+include { STAR_ALIGN } from '../subworkflows/STAR_ALIGN'
 
 //Include modules 
 include { CHLOROPLAST_DOWNLOAD } from '../modules/CHLOROPLAST_DOWNLOAD'
@@ -34,7 +34,7 @@ workflow GENOME_BASED_ANNOTATION {
 //	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
-//	def genome_input_ch = processChannels(reference_genome_ch)
+	def genome_input_ch = processChannels(reference_genome_ch)
 //	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
 //	nanopore_aligned_reads_ch = map_out_ch.bam_out
 //	genome_index_ch = map_out_ch.index_out
@@ -57,7 +57,7 @@ workflow GENOME_BASED_ANNOTATION {
  			def shortRead = files.size() > 1 ? files[1] : null
    			def pairedRead = files.size() > 2 ? files[2] : null
 			def long_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.nanopore_reads).parent, longRead)?.getAt(0) ?: { println "No files found"; null }
-			def gz = new File(long_fastq_file).name.endsWith('.gz') ? 2 : 1
+			def gz = new File(long_fastq_file).name.endsWith('.gz')? 2: 1
 			def long_name = new File(long_fastq_file).getBaseName(gz)
 			def short_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, shortRead)?.getAt(0) ?: { println "No files found"; null }
 		
@@ -66,12 +66,13 @@ workflow GENOME_BASED_ANNOTATION {
 				def paired_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, pairedRead)?.getAt(0) ?: { println "No files found"; null }
 				input_tuple = [long_name, short_fastq_file, paired_fastq_file]
 			} else {
-				input_tuple = [long_name, short_fastq_file, 'NO_FILE']
+				nofile = new File("$projectDir/assets/NO_FILE").getPath()
+				input_tuple = [long_name, short_fastq_file, nofile]
 			}
 			finalList << input_tuple
 		}
 			short_reads_input = Channel.fromList(finalList)
-			short_reads_bam = PRE_PROCESS_SHORT(short_reads_input)
+			short_reads_bam = STAR_ALIGN(short_reads_input, genome_input_ch)
 			
 	}	
 	//Run isoform annotation
