@@ -21,6 +21,13 @@ def processChannels(ch_input) {
     }
 }
 
+def checkFile(file, message) {
+	if (!file) {
+		System.err.println(message)
+                System.exit(1)
+	}
+}
+
 workflow GENOME_BASED_ANNOTATION {      
         // format input reads tuple, val, path
 	def reads_input_ch = processChannels(nanopore_reads_ch) 
@@ -42,22 +49,29 @@ workflow GENOME_BASED_ANNOTATION {
 	
 	//Match up long and short read
 	if ( params.config ) {
+
 		def links = new File(params.config).text.split('\n')
 		def finalList = []
-		
+
 		for (line in links) {
 			def files = line.split(',').collect { it.trim() }
 			def longRead = files[0]
  			def shortRead = files.size() > 1 ? files[1] : null
    			def pairedRead = files.size() > 2 ? files[2] : null
-			def long_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.nanopore_reads).parent, longRead)?.getAt(0) ?: { println "No files found"; null }
+
+			def long_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.nanopore_reads).parent, longRead)?.getAt(0)
 			def gz = new File(long_fastq_file).name.endsWith('.gz')? 2: 1
 			def long_name = new File(long_fastq_file).getBaseName(gz)
-			def short_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, shortRead)?.getAt(0) ?: { println "No files found"; null }
-		
+
+			def short_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, shortRead)?.getAt(0)
+			
+			checkFile(long_fastq_file, "No file found for ${longRead} described in ${params.config} at ${new File(params.nanopore_reads).parent}")		
+			checkFile(short_fastq_file, "No file found for ${shortRead} described in ${params.config} at ${new File(params.short_reads).parent}")	
+	
 			def input_tuple
 			if (pairedRead) {
-				def paired_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, pairedRead)?.getAt(0) ?: { println "No files found"; null }
+				def paired_fastq_file = new FileNameByRegexFinder().getFileNames(new File(params.short_reads).parent, pairedRead)?.getAt(0)
+				checkFile(paired_fastq_file, "No file found for ${pairedRead} described in ${params.config} at ${new File(params.short_reads).parent}")
 				input_tuple = [long_name, short_fastq_file, paired_fastq_file]
 			} else {
 				nofile = new File("$projectDir/assets/NO_FILE").getPath()
