@@ -29,7 +29,7 @@ process STAR_MAP {
 	tuple val(genome_id), path(genome)
 	
 	output:
-	tuple val(sample_id), path("${sample_id}_short-aln_sorted.bam")
+	tuple val(sample_id), path("${sample_id}_short-alnAligned.sortedByCoord.out.bam")
 	
 	script:
 	def paired_option = paired_read.name == 'NO_FILE' ? '' : '$paired_read'
@@ -37,7 +37,8 @@ process STAR_MAP {
 	STAR --runThreadN $task.cpus \
 	--genomeDir star_index \
 	--readFilesIn $short_read $paired_option \
-	--outSAMtype BAM SortedByCoordinate
+	--outSAMtype BAM SortedByCoordinate \
+	--outFileNamePrefix ${sample_id}_short-aln
 	"""
 
 }

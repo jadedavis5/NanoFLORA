@@ -27,24 +27,18 @@ workflow GENOME_BASED_ANNOTATION {
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-//	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
-//	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
+	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
+	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
 
 	//Pre-process reads 
-//	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
+	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
 	def genome_input_ch = processChannels(reference_genome_ch)
-//	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
-//	nanopore_aligned_reads_ch = map_out_ch.bam_out
-//	genome_index_ch = map_out_ch.index_out
+	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
+	nanopore_aligned_reads_ch = map_out_ch.bam_out
+	genome_index_ch = map_out_ch.index_out
 	
-	//Pre-process short reads
-	//if ( params.short_reads ) {
-	//	short_reads_ch = channel.fromPath(params.short_reads)
-	//	def short_reads_input_ch = processChannels(short_reads_ch)
-	//	short_reads_aligned = PRE_PROCESS_SHORT(short_reads)
-	//}
 	
 	//Match up long and short read
 	if ( params.config ) {
@@ -73,8 +67,9 @@ workflow GENOME_BASED_ANNOTATION {
 		}
 			short_reads_input = Channel.fromList(finalList)
 			short_reads_bam = STAR_ALIGN(short_reads_input, genome_input_ch)
-			
+			short_reads_bam.join(nanopore_aligned_reads_ch).view()			
 	}	
+
 	//Run isoform annotation
 //	if ( params.tool == 'loose' ) {
 //		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf

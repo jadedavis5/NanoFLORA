@@ -10,10 +10,10 @@ workflow STAR_ALIGN {
 
     	main:
 		//Index genome
-		GENOME_INDEX = STAR_INDEX(genome)
+		GENOME_INDEX = STAR_INDEX(genome.first())
 
 		//Map reads
-		STAR_BAM = STAR_MAP(GENOME_INDEX, reads, genome)		
+		STAR_BAM = STAR_MAP(GENOME_INDEX.first(), reads, genome.first())		
 			
     	emit:
 	mapped_reads = STAR_BAM
