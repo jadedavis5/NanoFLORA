@@ -86,16 +86,16 @@ workflow GENOME_BASED_ANNOTATION {
 	} else {
 		println('Run mode not given- please use --tool loose OR --tool strict')
 	}
-//	merged_gtf_ch
-//		.map { path ->
-//                def name = params.out
-//                tuple(name, path)
-//                }.set { gtf_ch }	
+	merged_gtf_ch
+		.map { path ->
+                def name = params.out
+                tuple(name, path)
+                }.set { gtf_ch }	
 
 	//Clean output gtf
-//	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
+	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
 
 	//Generate stats
-//	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
+	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
 }
 
