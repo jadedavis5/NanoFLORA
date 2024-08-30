@@ -9,7 +9,7 @@ workflow STRINGTIE2 {
 	annotation
 	
     	main:
-		STRINGTIE2_CREATE = STRINGTIE2_CREATE(bam, annotation)
+		STRINGTIE2_CREATE = STRINGTIE2_CREATE(bam, annotation.first())
 		STRINGTIE2_CREATE.gtf
 			.map { it -> it[1] }
 			.collect()

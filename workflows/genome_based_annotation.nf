@@ -67,17 +67,25 @@ workflow GENOME_BASED_ANNOTATION {
 		}
 			short_reads_input = Channel.fromList(finalList)
 			short_reads_bam = STAR_ALIGN(short_reads_input, genome_input_ch)
-			short_reads_bam.join(nanopore_aligned_reads_ch).view()			
 	}	
-
+	
 	//Run isoform annotation
-//	if ( params.tool == 'loose' ) {
-//		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
-//	} else if ( params.tool == 'strict' ) {
-//		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
-//	} else {
-//		println('Run mode not given- please use --tool loose OR --tool strict')
-//	}
+	if ( params.tool == 'loose' ) {
+		if ( params.config ) { 
+			st_bams = nanopore_aligned_reads_ch.join(short_reads_bam)	
+		} else {
+			nanopore_aligned_reads_ch
+			.map { tuple -> 
+			tuple + "$projectDir/assets/NO_FILE" }		 
+			.set { st_bams }
+		}		
+		st_bams.view()
+		merged_gtf_ch = STRINGTIE2(st_bams, annotation_ch).gtf
+	} else if ( params.tool == 'strict' ) {
+		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+	} else {
+		println('Run mode not given- please use --tool loose OR --tool strict')
+	}
 //	merged_gtf_ch
 //		.map { path ->
 //                def name = params.out
