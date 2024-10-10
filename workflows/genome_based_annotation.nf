@@ -40,13 +40,16 @@ workflow GENOME_BASED_ANNOTATION {
 	
 	
 	//Run isoform annotation
-	if ( params.tool == 'loose' ) {
-		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
-	} else if ( params.tool == 'strict' ) {
-		merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+	if ( params.ref_annotation ) {
+		if ( params.tool == 'ST' ) {
+			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else {
+			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+		}
 	} else {
-		println('Run mode not given- please use --tool loose OR --tool strict')
+		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
 	}
+
 	merged_gtf_ch
 		.map { path ->
                 def name = params.out
