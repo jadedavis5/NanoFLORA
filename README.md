@@ -23,5 +23,5 @@ OPTIONAL
 --out prefix for output file names [default 'outputAnnotation']
 --contamination input fasta files with contamination sequences to remove
 --chopper_quality minimum Phred score for filtering [default 10]
---chopper_length minimum 
+--chopper_length minimum read legnth for filtering [default 100]
 ```
