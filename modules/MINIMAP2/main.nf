@@ -17,7 +17,7 @@ process MINIMAP2_MAP {
 	script:
 	def map_args = params.nanopore_type == "dRNA" ? "-ax splice -uf -k14" : "-ax splice"
 	"""
-	minimap2 $map_args --split-prefix=foo $genome $reads | \
+	minimap2 $map_args --split-prefix=foo $genome $reads -t $task.cpus | \
 	samtools view -bS | samtools sort > ${sample_id}_${genome_name}_aln_sorted.bam
 	"""
 }

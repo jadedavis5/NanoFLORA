@@ -12,7 +12,7 @@ process SAMTOOLS_STATS {
 
 	script:
 	"""
-	samtools stats $bam > ${sample_id}.stats
+	samtools flagstat $bam > ${sample_id}.stats
 	"""
 }
 
