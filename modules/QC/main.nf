@@ -5,13 +5,13 @@ process FASTQC {
 	'quay.io/biocontainers/fastqc:0.12.1--hdfd78af_0' }"
   
     tag { "fastqc: ${sample_id}" }
+    label 'medium_task'
 
     input:
     tuple val(sample_id), path(reads) 
     
     output:
     tuple val(sample_id), path("${sample_id}*.{html,zip}"), emit: qc_html
-    //path "*.zip"
     
     script:
     """
