@@ -5,7 +5,7 @@
 
 Run using 
 ```
-nextflow run jadedavis5/anno-my-nano -profile singularity --nanopore_reads "/path/to/reads/*.fastq" --tool <loose,strict> --genome '/path/to/genome.fa' --nanopore_type <cDNA,dRNA> 
+nextflow run jadedavis5/anno-my-nano -profile singularity --nanopore_reads "/path/to/reads/*.fastq" --tool IQ --genome '/path/to/genome.fa'
 ```
 
 ## Run parameters

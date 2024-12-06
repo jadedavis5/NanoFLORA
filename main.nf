@@ -18,6 +18,6 @@ workflow {
 		GENOME_BASED_ANNOTATION()
 	}
 	else {
-		GENOME_FREE_ANNOTATION()
+		println "ERROR: No genome file given"
 	}
 }

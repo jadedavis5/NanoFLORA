@@ -1,12 +1,15 @@
 process MINIMAP2_MAP {
-	label 'medium_task'
+	
+	errorStrategy { task.process == "GENOME_BASED_ANNOTATION:CHLORO_CHECK:MINIMAP2_MAP" ? 'ignore' : 'terminate' }
+	memory { genome.size() < 4.GB ? 80.GB : 200.GB } 
+	cpus 64
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
                     'https://depot.galaxyproject.org/singularity/pomoxis%3A0.3.15--pyhdfd78af_0':
                     'quay.io/biocontainers/pomoxis:0.2.2--py_0' }"
 	
 	tag { "mapping: ${reads}" }
-
+		
 	input:
 	tuple val(sample_id), path(reads)
 	tuple val(genome_name), path(genome)
@@ -16,8 +19,9 @@ process MINIMAP2_MAP {
 
 	script:
 	def map_args = params.nanopore_type == "dRNA" ? "-ax splice -uf -k14" : "-ax splice"
+
 	"""
-	minimap2 $map_args --split-prefix=foo $genome $reads | \
+	minimap2 $map_args --split-prefix=foo $genome $reads -t $task.cpus | \
 	samtools view -bS | samtools sort > ${sample_id}_${genome_name}_aln_sorted.bam
 	"""
 }
@@ -26,8 +30,8 @@ process MINIMAP2_INDEX {
 	label 'medium_task'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/minimap2%3A2.28--he4a0461_1':
-                    'quay.io/biocontainers/minimap2:2.0.r191--0' }"
+                    'https://depot.galaxyproject.org/singularity/pomoxis%3A0.3.15--pyhdfd78af_0':
+                    'quay.io/biocontainers/pomoxis:0.2.2--py_0' }"
 
 	input:
 	tuple val(genome_name), path(genome)

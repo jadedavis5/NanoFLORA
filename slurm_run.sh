@@ -16,5 +16,5 @@ module load nextflow/23.10.0
 
 module load singularity/4.1.0-nompi
 
-nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads '../pipeline/test-data/*.gz' \
---genome '../Morexv2_files/Morexv3_chr1.fa' --nanopore_type dRNA -with-report -resume
+nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads '../rna_011_ptt_f3.2_RAW-READS/*SMALL*' \
+--genome '/scratch/fl3/jdavis/REFERENCES/RGT_1_2020/RGT_Planet_1.fasta.gz' --ref_annotation '/scratch/fl3/jdavis/REFERENCES/RGT_1_2020/RGT_Planet_v1.gtf' -resume
