@@ -1,8 +1,8 @@
 process SAMTOOLS_STATS {
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
-                    'quay.io/biocontainers/samtools:1.3--1' }"
+                    'https://depot.galaxyproject.org/singularity/samtools%3A1.21--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:0.1.19--h96c455f_13' }"
 
 	input:
 	tuple val(sample_id), path(bam)
@@ -18,8 +18,8 @@ process SAMTOOLS_STATS {
 
 process SAMTOOLS_UNMAPPED_FASTQ {
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
-                    'quay.io/biocontainers/samtools:1.3--1' }"
+                    'https://depot.galaxyproject.org/singularity/samtools%3A1.21--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:0.1.19--h96c455f_13' }"
 	input:
 	tuple val(sample_id), path(bam)
 	
@@ -35,8 +35,8 @@ process SAMTOOLS_UNMAPPED_FASTQ {
 
 process SAMTOOLS_INDEX {
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/samtools:1.19.2--h50ea8bc_0':
-                    'quay.io/biocontainers/samtools:1.3--1' }"
+                    'https://depot.galaxyproject.org/singularity/samtools%3A1.21--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:0.1.19--h96c455f_13' }"
 
 	input:
         tuple val(sample_id), path(bam)

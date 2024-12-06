@@ -1,8 +1,8 @@
 process CHOPPER_FILTER {
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/chopper:0.8.0--hdcf5f25_0':
-                    'quay.io/biocontainers/chopper:0.8.0--hdcf5f25_0' }"
+                    'https://depot.galaxyproject.org/singularity/chopper%3A0.9.0--hdcf5f25_1':
+                    'quay.io/biocontainers/chopper:0.9.0--hdcf5f25_1' }"
 
         input:
         tuple val(sample_id), path(reads)

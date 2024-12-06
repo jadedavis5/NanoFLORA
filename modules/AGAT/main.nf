@@ -1,8 +1,8 @@
 process AGAT_CONVERT {
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.0--pl5321hdfd78af_0':
-                    'quay.io/biocontainers/agat:0.8.0--pl5262hdfd78af_0' }"
+                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.1--pl5321hdfd78af_0':
+                    'quay.io/biocontainers/agat:1.4.1--pl5321hdfd78af_0' }"
 
         input:
         tuple val(output_name), path(gtf)
@@ -20,8 +20,8 @@ process AGAT_CONVERT {
 process AGAT_UTR {
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.0--pl5321hdfd78af_0':
-                    'quay.io/biocontainers/agat:0.8.0--pl5262hdfd78af_0' }"
+                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.1--pl5321hdfd78af_0':
+                    'quay.io/biocontainers/agat:1.4.1--pl5321hdfd78af_0' }"
 
         input:
         tuple val(output_name), path(gff)
@@ -40,8 +40,8 @@ process AGAT_UTR {
 process AGAT_STATISTICS {
 
         container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.0--pl5321hdfd78af_0':
-                    'quay.io/biocontainers/agat:0.8.0--pl5262hdfd78af_0' }"
+                    'https://depot.galaxyproject.org/singularity/agat%3A1.4.1--pl5321hdfd78af_0':
+                    'quay.io/biocontainers/agat:1.4.1--pl5321hdfd78af_0' }"
 
 	input:
 	tuple val(gff_id), path(gff)
