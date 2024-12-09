@@ -42,10 +42,24 @@ process SAMTOOLS_INDEX {
         tuple val(sample_id), path(bam)
 
 	output:
-	tuple path(bam), path("${sample_id}*.csi")
+	tuple path(bam), path("${sample_id}*.{bai,csi}")
 
 	script:
+	
+	if (params.index == 'csi') {
 	"""
 	samtools index -c $bam
 	"""
+	
+	} else if (params.index == 'bai') {
+
+	"""
+	samtools index $bam
+	"""
+
+	} else {
+	"""
+	echo '--index must be either bai or csi'
+	"""
+	}
 }
