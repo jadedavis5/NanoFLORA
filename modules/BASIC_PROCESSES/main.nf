@@ -58,3 +58,17 @@ process BASIC_COMBINE_AGAT_RESULTS {
 	awk '{if (\$4=="transcript") print \$0}' $noncanonical | wc -l >> canonical_statistics_summary.txt
 	"""
 }
+
+process BASIC_UNZIP {
+	
+	input:
+	path genome
+
+	output:
+	path '*'
+
+	script:
+	"""
+	gunzip -c $genome > \$(echo "$genome" | rev | cut -d'.' -f2- | rev)
+	"""
+}
