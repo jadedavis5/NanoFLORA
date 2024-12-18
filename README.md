@@ -22,6 +22,7 @@ OPTIONAL
 --tool optional tool selection for reference guided annotation- ST (StringTie2) or IQ (IsoQuant) [default IQ] 
 --out prefix for output file names [default 'outputAnnotation']
 --contamination input fasta files with contamination sequences to remove
+--index can be changed to 'bai' depending on genome size [default 'csi']
 --chopper_quality minimum Phred score for filtering [default 10]
 --chopper_length minimum read legnth for filtering [default 100]
 ```

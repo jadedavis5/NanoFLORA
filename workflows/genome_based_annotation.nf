@@ -34,14 +34,14 @@ workflow GENOME_BASED_ANNOTATION {
 	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
 	
 	//Index genome and map reads
-	def genome_input_raw_ch = processChannels(reference_genome_ch)
-	
-	//Unzip if needed
-	if ( genome_input_raw_ch.map{ it[1].toString().tokenize('.').last() == 'gz' } ) {
-		genome_input_ch = BASIC_UNZIP(genome_input_raw_ch)
+	def genome_input_ch
+	if (params.genome.endsWith('.gz')) {
+		genome_unzipped_ch = BASIC_UNZIP(reference_genome_ch)
+		genome_input_ch = processChannels(genome_unzipped_ch)
 	} else {
-		genome_input_ch = genome_input_raw_ch
+		genome_input_ch = processChannels(reference_genome_ch)
 	}
+	
 	map_out_ch = MAP_AND_STATS('refgenome_aln', nanopore_reads_filtered_ch, genome_input_ch, false)
 	nanopore_aligned_reads_ch = map_out_ch.bam_out
 	genome_index_ch = map_out_ch.index_out

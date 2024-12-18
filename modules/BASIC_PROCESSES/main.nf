@@ -60,16 +60,15 @@ process BASIC_COMBINE_AGAT_RESULTS {
 }
 
 process BASIC_UNZIP {
-	stageInMode 'link'
-
+	
 	input:
-	tuple val(genome_id), path(genome)
+	path genome
 
 	output:
-	tuple val(genome_id), path('*')
+	path '*'
 
 	script:
 	"""
-        gunzip -f $genome
+	gunzip -c $genome > \$(echo "$genome" | rev | cut -d'.' -f2- | rev)
 	"""
 }

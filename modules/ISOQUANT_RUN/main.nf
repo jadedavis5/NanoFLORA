@@ -1,5 +1,5 @@
 process ISOQUANT_RUN {
-	label 'medium_task'
+	label 'isoquant'
 	containerOptions '--bind $PWD,$HOME'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
