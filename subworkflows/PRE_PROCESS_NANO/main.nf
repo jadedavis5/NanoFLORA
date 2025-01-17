@@ -31,12 +31,8 @@ workflow PRE_PROCESS_NANO {
 
         	nanopore_reads_postcontam_ch = SEQ_REMOVE(reads, remove_input_ch, false).uncontaminated_reads
 		
-		//Trim reads
-		adapters_ch = channel.fromPath(params.adapters)
-		nanopore_reads_trimmed_ch = PORECHOP_ABI(nanopore_reads_postcontam_ch, adapters_ch.first())
-		
 		//Filter reads based on quality and length
-		nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_trimmed_ch).filtered_reads
+		nanopore_reads_filtered_ch = CHOPPER_FILTER(nanopore_reads_postcontam_ch).filtered_reads
 	
 		//Post pre-processing quality check 
 		QC_POST('post-processing', nanopore_reads_filtered_ch)
