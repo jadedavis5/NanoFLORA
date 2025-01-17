@@ -5,7 +5,6 @@ include { SEQ_REMOVE } from '../SEQ_REMOVE'
 
 //Include modules
 include { CHOPPER_FILTER } from '../../modules/CHOPPER_FILTER'
-include { PORECHOP_ABI } from '../../modules/PORECHOP_ABI'
 
 workflow PRE_PROCESS_NANO {
 
