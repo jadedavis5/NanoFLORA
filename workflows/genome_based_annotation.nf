@@ -27,8 +27,8 @@ workflow GENOME_BASED_ANNOTATION {
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-	def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
-	CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
+	//def chloroplast_genome_ch = processChannels(CHLOROPLAST_DOWNLOAD())
+	//CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out	
 
 	//Pre-process reads 
 	nanopore_reads_filtered_ch = PRE_PROCESS_NANO(reads_input_ch)
