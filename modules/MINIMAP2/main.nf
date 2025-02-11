@@ -2,7 +2,9 @@ process MINIMAP2_MAP {
 	
 	errorStrategy { task.process == "GENOME_BASED_ANNOTATION:CHLORO_CHECK:MINIMAP2_MAP" ? 'ignore' : 'terminate' }
 	memory { genome.size() < 4.GB ? 80.GB : 110.GB } 
+	time = 24.h
 	cpus 64
+	
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
                     'https://depot.galaxyproject.org/singularity/pomoxis%3A0.3.15--pyhdfd78af_0':
