@@ -7,7 +7,7 @@ process MINIMAP2_MAP {
 	
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/pomoxis%3A0.3.15--pyhdfd78af_0':
+                    'oras://community.wave.seqera.io/library/minimap2_samtools:564e363a70ace2ad':
                     'quay.io/biocontainers/pomoxis:0.2.2--py_0' }"
 	
 	tag { "mapping: ${reads}" }
@@ -39,7 +39,7 @@ process MINIMAP2_INDEX {
 	label 'medium_task'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/pomoxis%3A0.3.15--pyhdfd78af_0':
+                    'oras://community.wave.seqera.io/library/minimap2_samtools:564e363a70ace2ad':
                     'quay.io/biocontainers/pomoxis:0.2.2--py_0' }"
 
 	input:
