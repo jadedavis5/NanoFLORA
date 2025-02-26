@@ -3,7 +3,7 @@ process ISOQUANT_RUN {
 	containerOptions '--bind $PWD,$HOME'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/isoquant%3A3.6.2--hdfd78af_0':
+                    'https://depot.galaxyproject.org/singularity/isoquant%3A3.6.3--hdfd78af_0':
                     'quay.io/biocontainers/isoquant:3.6.2--hdfd78af_0' }"
 
 	input:
@@ -30,13 +30,13 @@ process ISOQUANT_RUN {
 
 	if (annotation.name == 'NO_FILE') {
 	"""	
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --report_novel_unspliced true
 	mv $params.out/OUT/OUT.transcript_models.gtf ${params.out}_IQ.gtf
 	"""
 
 	} else {
 	"""
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --report_novel_unspliced true
 	mv $params.out/OUT/OUT.extended_annotation.gtf ${params.out}_IQ.gtf
 	"""
 	}

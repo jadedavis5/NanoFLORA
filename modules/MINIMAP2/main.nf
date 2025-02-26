@@ -21,16 +21,10 @@ process MINIMAP2_MAP {
 
 	script:
 	def map_args = params.nanopore_type == "dRNA" ? "-ax splice -uf -k14" : "-ax splice"
-        def filter
-        if (task.process == "GENOME_BASED_ANNOTATION:PRE_PROCESS_NANO:SEQ_REMOVE:MAP_AND_STATS:MINIMAP2_MAP") {
-                filter = ""
-        } else {
-                filter = "-F 2048 -q 20"
-        }
 
         """
         minimap2 $map_args --split-prefix=foo $genome $reads -t $task.cpus | \
-        samtools view -bS $filter | samtools sort > ${sample_id}_${genome_name}_aln_sorted.bam
+        samtools view -bS | samtools sort > ${sample_id}_${genome_name}_aln_sorted.bam
         """
 
 }
