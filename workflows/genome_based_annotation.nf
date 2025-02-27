@@ -11,7 +11,7 @@ include { FLAIR } from '../subworkflows/FLAIR'
 //Include modules 
 include { BASIC_UNZIP } from '../modules/BASIC_PROCESSES'
 
-if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
+//if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
 if (params.chloroplast) { chloroplast_input_ch = channel.fromPath(params.chloroplast, checkIfExists: true) } else { println 'No chloroplast genome provided, will not perform chlorplast % check' }
 
@@ -77,6 +77,6 @@ workflow GENOME_BASED_ANNOTATION {
 	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
 
 	//Generate stats
-	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
+	GTF_STATS(cleaned_final_gff, genome_input_ch, annotation_ch)
 }
 

@@ -23,6 +23,7 @@ process FLAIR_STEP1 {
 
 process FLAIR_STEP2 {
 
+	label 'small_task'
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/flair%3A2.0.0--pyhdfd78af_0':
         'quay.io/biocontainers/flair:1.4--0' }"

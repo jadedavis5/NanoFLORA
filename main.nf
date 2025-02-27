@@ -12,12 +12,12 @@ nextflow.enable.dsl=2
 */
 
 include { GENOME_BASED_ANNOTATION } from './workflows/genome_based_annotation.nf'
+include { CLEAN_STATS } from './workflows/clean_stats.nf'
 
 workflow {
-	if ( params.genome ) {
+	if ( params.mode == 'clean_stats' ||  params.mode == 'stats' ) {
+		CLEAN_STATS()
+	} else {
 		GENOME_BASED_ANNOTATION()
-	}
-	else {
-		println "ERROR: No genome file given"
 	}
 }
