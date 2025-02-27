@@ -6,6 +6,7 @@ include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
 include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
+include { FLAIR } from '../subworkflows/FLAIR'
 
 //Include modules 
 include { BASIC_UNZIP } from '../modules/BASIC_PROCESSES'
@@ -53,6 +54,8 @@ workflow GENOME_BASED_ANNOTATION {
 	if ( params.ref_annotation ) {
 		if ( params.tool == 'ST' ) {
 			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else if ( params.tool == 'FLAIR' ) {
+			merged_gtf_ch = FLAIR(nanopore_reads_filtered_ch, nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		} else {
 			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		}

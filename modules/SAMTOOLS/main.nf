@@ -42,7 +42,7 @@ process SAMTOOLS_INDEX {
         tuple val(sample_id), path(bam)
 
 	output:
-	tuple path(bam), path("${sample_id}*.{bai,csi}")
+	tuple path(bam), path("${sample_id}*.{bai,csi}"), val(sample_id)
 
 	script:
 	
