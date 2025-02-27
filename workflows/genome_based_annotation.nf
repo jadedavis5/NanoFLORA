@@ -57,7 +57,11 @@ workflow GENOME_BASED_ANNOTATION {
 			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		}
 	} else {
-		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		if ( params.tool == 'ST' ) {
+			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else {
+			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+		}
 	}
 
 	merged_gtf_ch

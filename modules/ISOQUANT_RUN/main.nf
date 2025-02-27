@@ -30,13 +30,13 @@ process ISOQUANT_RUN {
 
 	if (annotation.name == 'NO_FILE') {
 	"""	
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --report_novel_unspliced true
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
 	mv $params.out/OUT/OUT.transcript_models.gtf ${params.out}_IQ.gtf
 	"""
 
 	} else {
 	"""
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --report_novel_unspliced true
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
 	mv $params.out/OUT/OUT.extended_annotation.gtf ${params.out}_IQ.gtf
 	"""
 	}
