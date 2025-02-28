@@ -5,7 +5,7 @@
 
 Run using 
 ```
-nextflow run jadedavis5/anno-my-nano -profile singularity --nanopore_reads "/path/to/reads/*.fastq" --tool IQ --genome '/path/to/genome.fa'
+nextflow run jadedavis5/NanoFLORA -profile singularity --nanopore_reads "/path/to/reads/*.fastq" --tool IQ --genome '/path/to/genome.fa'
 ```
 
 ## Run parameters
@@ -17,6 +17,8 @@ REQUIRED
 --genome genome fasta file
 
 OPTIONAL
+--mode run only GTF cleaning and/or generation of statistics with 'clean_stats' or 'stats'. Must be run with --gtf_input. [Default mode full pipeline will run].
+--gtf_input GTF file input with --mode clean_stats or --mode stats. 
 --outputdir specify an output location [default '.']
 --ref_annotation draft gff/gtf annotation file
 --chloroplast chloroplast genome FASTA- the % of reads mapping to this will be checked to determine if there is an overrepresentation of chloroplast sequences
