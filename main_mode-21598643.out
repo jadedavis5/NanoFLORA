@@ -1,0 +1,2364 @@
+N E X T F L O W  ~  version 23.10.0
+Launching `main.nf` [exotic_wescoff] DSL2 - revision: 158e8280bb
+No chloroplast genome provided, will not perform chlorplast % check
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+WARN: The operator `first` is useless when applied to a value channel which returns a single value by definition
+
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+WARN: The operator `first` is useless when applied to a value channel which returns a single value by definition
+
+executor >  slurm (4)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+WARN: The operator `first` is useless when applied to a value channel which returns a single value by definition
+
+executor >  slurm (5)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+WARN: The operator `first` is useless when applied to a value channel which returns a single value by definition
+
+executor >  slurm (5)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+
+executor >  slurm (7)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+
+executor >  slurm (7)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (7)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (7)
+[b6/31f3e9] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (8)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (8)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (8)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[e1/10863b] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (9)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[e1/10863b] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (10)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[e1/10863b] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (10)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[e1/10863b] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (10)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[e1/10863b] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (10)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (12)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (12)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (12)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[11/74ed15] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (13)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (13)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (13)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (14)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (14)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[af/5e2870] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (15)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (15)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (17)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (17)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (17)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (18)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (19)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (19)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (19)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[ad/626bfa] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (19)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[f8/a04255] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[bd/fb6725] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (21)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (21)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (21)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:PRE... -
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (22)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (22)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [  0%] 0 of 1
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (22)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[be/9675fc] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[c5/ea152b] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (24)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (24)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:MAP... -
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [ 50%] 1 of 2
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (25)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (25)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:ISO... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (26)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [  0%] 0 of 1
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (26)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (26)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (27)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (27)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (27)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (28)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (28)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (29)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (29)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (29)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (30)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (30)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (33)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (34)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (34)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (35)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (36)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (36)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (36)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (36)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (37)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (37)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (37)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (38)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[b9/ac7289] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (38)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[b9/ac7289] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[-        ] process > GENOME_BASED_ANNOTATION:GTF... -
+
+executor >  slurm (39)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[b9/ac7289] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[d9/5da6b6] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+
+executor >  slurm (39)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[b9/ac7289] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[d9/5da6b6] process > GENOME_BASED_ANNOTATION:GTF... [  0%] 0 of 1
+
+executor >  slurm (39)
+[21/857e76] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[46/1514a9] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[92/1d9d69] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[24/2552ae] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[78/33a062] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[9d/fb18d6] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[fa/f1d5ac] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[17/60331c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[72/9ea923] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[48/19aa6c] process > GENOME_BASED_ANNOTATION:PRE... [100%] 2 of 2 ✔
+[10/0a1b6f] process > GENOME_BASED_ANNOTATION:PRE... [100%] 1 of 1 ✔
+[13/6ea607] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[ec/ab20c6] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[5a/e58c40] process > GENOME_BASED_ANNOTATION:MAP... [100%] 2 of 2 ✔
+[28/6b55ef] process > GENOME_BASED_ANNOTATION:MAP... [100%] 1 of 1 ✔
+[5d/a5d21f] process > GENOME_BASED_ANNOTATION:ISO... [100%] 2 of 2 ✔
+[ae/02e254] process > GENOME_BASED_ANNOTATION:ISO... [100%] 1 of 1 ✔
+[2c/861c72] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[2d/5cdf5d] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[68/7705bd] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[6b/f372b9] process > GENOME_BASED_ANNOTATION:CLE... [100%] 1 of 1 ✔
+[4b/13a360] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[b9/ac7289] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/282e9b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[58/f2dcb5] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[73/7e8153] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[64/fcddda] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[9b/00d1ba] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[a6/72567b] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+[d9/5da6b6] process > GENOME_BASED_ANNOTATION:GTF... [100%] 1 of 1 ✔
+Completed at: 27-Feb-2025 14:30:16
+Duration    : 2h 35m 28s
+CPU hours   : 86.0
+Succeeded   : 39
+
+
