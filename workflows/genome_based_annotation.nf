@@ -11,7 +11,7 @@ include { FLAIR } from '../subworkflows/FLAIR'
 //Include modules 
 include { BASIC_UNZIP } from '../modules/BASIC_PROCESSES'
 
-if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
+if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { nanopore_reads_ch = channel.empty() }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
 if (params.chloroplast) { chloroplast_input_ch = channel.fromPath(params.chloroplast, checkIfExists: true) } else { println 'No chloroplast genome provided, will not perform chlorplast % check' }
 
@@ -24,11 +24,11 @@ def processChannels(ch_input) {
 
 workflow GENOME_BASED_ANNOTATION {      
         // format input reads tuple, val, path
-	def reads_input_ch = processChannels(nanopore_reads_ch) 
+	def reads_input_ch = processChannels(nanopore_reads_ch.ifEmpty { error "No reads provided, terminating!" }) 
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-	if (params.chloroplast ) {
+	if (params.chloroplast) {
 		def chloroplast_genome_ch =  processChannels(chloroplast_input_ch)
 		CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out
         }

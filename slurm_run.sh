@@ -16,5 +16,6 @@ module load nextflow/23.10.0
 
 module load singularity/4.1.0-nompi
 
-nextflow run main.nf -profile pawsey_setonix,singularity --nanopore_reads '/scratch/fl3/jdavis/rna_011_ptt_f3.2_RAW-READS/rna_011_ptt_f32_*gz' \
+nextflow run main.nf -profile pawsey_setonix,singularity --mode 'clean_stats' --gtf_input '../../outputAnnotation_UNCLEAN_BAMBUref-3-8-3.gtf' \
 --genome '/scratch/fl3/jdavis/REFERENCES/RGT_2_2024/220816_RGT_Planet_pseudomolecules_and_unplaced_contigs_CPclean.fasta' --ref_annotation '/scratch/fl3/jdavis/REFERENCES/RGT_2_2024/RGT_Planet_v2.gtf' -resume
+
