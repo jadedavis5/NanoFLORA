@@ -17,7 +17,6 @@ workflow GTF_STATS {
 	take:
     	gff // tuple val, path
 	genome // tuple val, path
-	genome_index // tuple val, path
 	annotation
 	
     	main:

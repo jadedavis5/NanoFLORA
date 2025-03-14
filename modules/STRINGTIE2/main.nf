@@ -1,5 +1,5 @@
 process STRINGTIE2_CREATE {
-	container= 'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0'
+	container= 'https://depot.galaxyproject.org/singularity/stringtie%3A3.0.0--h29c0135_0'
 
 	input:
 	tuple val(sample_id), path(bam)
@@ -16,7 +16,7 @@ process STRINGTIE2_CREATE {
 }
 
 process STRINGTIE2_MERGE {
-        container= 'https://depot.galaxyproject.org/singularity/stringtie%3A2.2.3--h43eeafb_0'
+        container= 'https://depot.galaxyproject.org/singularity/stringtie%3A3.0.0--h29c0135_0'
 
         input:
         path gtfs

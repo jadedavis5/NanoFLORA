@@ -3,7 +3,7 @@ process ISOQUANT_RUN {
 	containerOptions '--bind $PWD,$HOME'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
-                    'https://depot.galaxyproject.org/singularity/isoquant%3A3.6.2--hdfd78af_0':
+                    'https://depot.galaxyproject.org/singularity/isoquant%3A3.6.3--hdfd78af_0':
                     'quay.io/biocontainers/isoquant:3.6.2--hdfd78af_0' }"
 
 	input:

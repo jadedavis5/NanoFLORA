@@ -6,11 +6,12 @@ include { CLEAN_GTF } from '../subworkflows/CLEAN_GTF'
 include { GTF_STATS } from '../subworkflows/GTF_STATS'
 include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
+include { FLAIR } from '../subworkflows/FLAIR'
 
 //Include modules 
 include { BASIC_UNZIP } from '../modules/BASIC_PROCESSES'
 
-if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { exit 1, 'No reads provided, terminating!' }
+if (params.nanopore_reads) { nanopore_reads_ch = channel.fromPath(params.nanopore_reads, checkIfExists: true) } else { nanopore_reads_ch = channel.empty() }
 if (params.genome) { reference_genome_ch = channel.fromPath(params.genome, checkIfExists: true) } else { exit 1, 'No reference genome provided, terminating!' }
 if (params.chloroplast) { chloroplast_input_ch = channel.fromPath(params.chloroplast, checkIfExists: true) } else { println 'No chloroplast genome provided, will not perform chlorplast % check' }
 
@@ -23,11 +24,11 @@ def processChannels(ch_input) {
 
 workflow GENOME_BASED_ANNOTATION {      
         // format input reads tuple, val, path
-	def reads_input_ch = processChannels(nanopore_reads_ch) 
+	def reads_input_ch = processChannels(nanopore_reads_ch.ifEmpty { error "No reads provided, terminating!" }) 
 	annotation_ch = params.ref_annotation ? channel.fromPath(params.ref_annotation) : channel.fromPath("$projectDir/assets/NO_FILE")
 
 	//Check chloroplast %
-	if (params.chloroplast ) {
+	if (params.chloroplast) {
 		def chloroplast_genome_ch =  processChannels(chloroplast_input_ch)
 		CHLORO_CHECK('chloroplast_mapping', reads_input_ch, chloroplast_genome_ch, false).multiqc_out
         }
@@ -53,11 +54,17 @@ workflow GENOME_BASED_ANNOTATION {
 	if ( params.ref_annotation ) {
 		if ( params.tool == 'ST' ) {
 			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else if ( params.tool == 'FLAIR' ) {
+			merged_gtf_ch = FLAIR(nanopore_reads_filtered_ch, nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		} else {
 			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		}
 	} else {
-		merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		if ( params.tool == 'ST' ) {
+			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else {
+			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+		}
 	}
 
 	merged_gtf_ch
@@ -70,6 +77,6 @@ workflow GENOME_BASED_ANNOTATION {
 	cleaned_final_gff = CLEAN_GTF(gtf_ch, genome_input_ch).cleaned_gff
 
 	//Generate stats
-	GTF_STATS(cleaned_final_gff, genome_input_ch, genome_index_ch, annotation_ch)
+	GTF_STATS(cleaned_final_gff, genome_input_ch, annotation_ch)
 }
 
