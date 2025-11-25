@@ -15,8 +15,8 @@ workflow ISOQUANT {
 
 		BAM_WITH_INDEX
 		 	.multiMap { it ->
-        		bam: it[0]
-        		index: it[1]
+        		bam: it[1]
+        		index: it[2]
 			}
 			.set { index_output }
 

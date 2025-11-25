@@ -1,5 +1,6 @@
 process ISOQUANT_RUN {
 	label 'isoquant'
+	time '23h'
 	containerOptions '--bind $PWD,$HOME'
 
 	container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
@@ -30,13 +31,13 @@ process ISOQUANT_RUN {
 
 	if (annotation.name == 'NO_FILE') {
 	"""	
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --threads 16
 	mv $params.out/OUT/OUT.transcript_models.gtf ${params.out}_IQ.gtf
 	"""
 
 	} else {
 	"""
-	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams
+	isoquant.py --reference $genome $complete_annotation $arg_annotation --data_type nanopore -o $params.out --bam $bams --threads 16
 	mv $params.out/OUT/OUT.extended_annotation.gtf ${params.out}_IQ.gtf
 	"""
 	}

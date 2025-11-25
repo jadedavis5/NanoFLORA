@@ -42,7 +42,7 @@ process SAMTOOLS_INDEX {
         tuple val(sample_id), path(bam)
 
 	output:
-	tuple path(bam), path("${sample_id}*.{bai,csi}"), val(sample_id)
+	tuple val(sample_id), path(bam), path("${sample_id}*.{bai,csi}")
 
 	script:
 	
@@ -62,4 +62,19 @@ process SAMTOOLS_INDEX {
 	echo '--index must be either bai or csi'
 	"""
 	}
+}
+process SAMTOOLS_FAIDX {
+        container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
+                    'https://depot.galaxyproject.org/singularity/samtools%3A1.21--h50ea8bc_0':
+                    'quay.io/biocontainers/samtools:0.1.19--h96c455f_13' }"
+        input:
+        tuple val(genome_id), path(genome)
+
+        output:
+        tuple val(genome_id), path(genome), path("${genome}.fai")
+
+        script:
+        """
+        samtools faidx $genome
+        """
 }

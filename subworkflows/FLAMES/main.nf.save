@@ -1,0 +1,22 @@
+include { FLAMES_RUN } from '../../modules/FLAMES'
+include { SAMTOOLS_INDEX } from '../../modules/SAMTOOLS'
+
+workflow FLAMES {
+
+	take:
+	reads
+	bams
+	genome
+	annotation
+	config
+
+	main:
+	BAM_WITH_INDEX = SAMTOOLS_INDEX(bams)
+	files = BAM_WITH_INDEX.combine(
+//	renamed_files = FLAMES_RENAME(
+	
+	//gtf_out = FLAMES_RUN
+	
+	emit:
+	gtf = genome
+}

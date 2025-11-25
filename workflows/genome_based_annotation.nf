@@ -7,6 +7,8 @@ include { GTF_STATS } from '../subworkflows/GTF_STATS'
 include { PRE_PROCESS_NANO } from '../subworkflows/PRE_PROCESS_NANO'
 include { ISOQUANT } from '../subworkflows/ISOQUANT'
 include { FLAIR } from '../subworkflows/FLAIR'
+include { BAMBU } from '../subworkflows/BAMBU'
+include { FLAMES } from '../subworkflows/FLAMES'
 
 //Include modules 
 include { BASIC_UNZIP } from '../modules/BASIC_PROCESSES'
@@ -56,12 +58,21 @@ workflow GENOME_BASED_ANNOTATION {
 			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
 		} else if ( params.tool == 'FLAIR' ) {
 			merged_gtf_ch = FLAIR(nanopore_reads_filtered_ch, nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
+		} else if ( params.tool == 'BAMBU' ) {
+			bams = nanopore_aligned_reads_ch.map { it -> it[1] }.collect()
+			merged_gtf_ch = BAMBU(bams, genome_input_ch, annotation_ch).gtf
+		 } else if ( params.tool == 'FLAMES' ) {
+			config = channel.fromPath(params.flames_config)
+			merged_gtf_ch = FLAMES(nanopore_reads_filtered_ch, nanopore_aligned_reads_ch, genome_input_ch, annotation_ch, config).gtf
 		} else {
 			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		}
 	} else {
 		if ( params.tool == 'ST' ) {
 			merged_gtf_ch = STRINGTIE2(nanopore_aligned_reads_ch, annotation_ch).gtf
+		} else if ( params.tool == 'BAMBU' ) {
+			bams = nanopore_aligned_reads_ch.map { it -> it[1] }.collect()
+                        merged_gtf_ch = BAMBU(bams, genome_input_ch, annotation_ch).gtf
 		} else {
 			merged_gtf_ch = ISOQUANT(nanopore_aligned_reads_ch, genome_input_ch, annotation_ch).gtf
 		}
