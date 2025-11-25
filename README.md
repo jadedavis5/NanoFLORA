@@ -22,7 +22,7 @@ OPTIONAL
 --outputdir specify an output location [default '.']
 --ref_annotation draft gff/gtf annotation file
 --chloroplast chloroplast genome FASTA- the % of reads mapping to this will be checked to determine if there is an overrepresentation of chloroplast sequences
---tool optional tool selection for reference guided annotation- ST (StringTie2) or IQ (IsoQuant) [default IQ] 
+--tool optional tool selection. ST (StringTie3), FLAIR, BAMBU, FLAMES or IsoQuant by default  
 --out prefix for output file names [default 'outputAnnotation']
 --contamination input fasta files with contamination sequences to remove
 --index can be changed to 'bai' depending on genome size [default 'csi']
